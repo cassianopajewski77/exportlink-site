@@ -1,0 +1,6 @@
+{
+  // Site estático da landing page (exportlink.com.br). Sem código de servidor: só arquivos da pasta site/.
+  "name": "exportlink-site",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./site", "not_found_handling": "404-page" }
+}
