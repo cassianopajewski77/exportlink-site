@@ -602,3 +602,9 @@ body::before { background: var(--navy); }
 @media (max-width: 420px) { .brand__sub { display: none; } }
 .page-hero h3, .hero h3 { color: var(--white); }
 .module-link { margin-top: 18px; }
+/* Ilustração da jornada da exportação (página Serviços) */
+.journey { display: block; width: 100%; height: auto; max-width: 100%; }
+@media (prefers-reduced-motion: no-preference) {
+  .journey__route { animation: journey-flow 1.4s linear infinite; }
+  @keyframes journey-flow { to { stroke-dashoffset: -26; } }
+}
