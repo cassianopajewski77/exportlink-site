@@ -87,3 +87,22 @@ Tudo que for enviado para comercial@exportlink.com.br vai cair no seu Gmail.
 
 Depois do Active: **Workers & Pages → export-link → Settings → Domains & Routes → Add → Custom domain** →
 `app.exportlink.com.br`. O endereço `.workers.dev` atual continua funcionando.
+
+---
+
+## Aparecer no Google (Google Search Console)
+
+O Google só mostra um site depois de visitá-lo. Um site novo pode levar de alguns dias a algumas semanas.
+Para acelerar:
+
+1. Entre em **search.google.com/search-console** com a sua conta Google.
+2. Clique em **Adicionar propriedade** e escolha **Domínio** (à esquerda). Digite `exportlink.com.br` e continue.
+3. O Google mostra um registro **TXT** (começa com `google-site-verification=`). Copie.
+4. No Cloudflare: domínio **exportlink.com.br → DNS → Records → Add record**.
+   Type **TXT**, Name `@`, Content: cole o texto do Google. Salve.
+5. Volte ao Search Console e clique em **Verificar** (se falhar, espere 10 minutos e tente de novo).
+6. No menu da esquerda, clique em **Sitemaps**, digite `sitemap.xml` e clique em **Enviar**.
+7. No topo, em **Inspecionar URL**, cole `https://www.exportlink.com.br/` e clique em **Solicitar indexação**.
+
+No começo, pesquise por **"Export Link Pro"** ou **exportlink.com.br**: "export link" sozinho é um termo
+genérico e outros sites aparecem antes.
