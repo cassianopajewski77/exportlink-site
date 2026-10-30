@@ -1,21 +1,27 @@
-/* Export Link Global Solutions: folha de estilo única do site.
+/* Export Link: folha de estilo única do site. Cores e fontes iguais às do exportlink.com.br
+   (navy dominante, verde secundário, laranja só nos botões de ação; Manrope + IBM Plex Sans).
    Layout: coluna de leitura de 1160px; faixas de cor ocupam a largura toda e
    alternam branco, cinza-azulado claro e azul-marinho. */
 :root {
-  --navy: #0F2A47;        /* marca, títulos, faixas escuras */
-  --navy-2: #1B3B5F;      /* superfícies escuras secundárias */
-  --ink: #1C2B3D;         /* texto corrido */
-  --muted: #536274;       /* texto secundário (AA sobre branco e --paper) */
-  --paper: #F3F6FA;       /* faixas claras */
+  --navy: #0A2540;        /* marca, títulos, faixas escuras */
+  --navy-2: #12324F;      /* superfícies escuras secundárias */
+  --ink: #0A2540;         /* texto corrido */
+  --muted: #4A5D72;       /* texto secundário (AA sobre branco e --paper) */
+  --paper: #F4F6F8;       /* faixas claras */
   --white: #FFFFFF;
-  --line: #D5DEE8;        /* bordas e divisórias */
-  --accent: #2463A6;      /* azul médio: botões e links */
-  --accent-dark: #1A4D84;
-  --on-navy-muted: #B9C8DA;
+  --line: #DDE3EA;        /* bordas e divisórias */
+  --accent: #00875A;      /* azul médio: botões e links */
+  --accent-dark: #006B47;
+  --on-navy-muted: #A9BBCE;
   --whatsapp: #1F8A4C;
+  --navy-line: #24476A;
+  --green-on-navy: #4FD69C;
+  --green-soft: #E3F4EC;
+  --orange: #FF6B00;     /* só nos botões de ação, como no exportlink.com.br */
+  --orange-hover: #E85F00;
 
-  --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --font-body: "Source Sans 3", "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: "Manrope", "Segoe UI", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
 
   --step--1: 0.875rem;
   --step-0: 1.0625rem;
@@ -27,7 +33,7 @@
   --wrap: 1160px;
   --gutter: max(16px, env(safe-area-inset-left, 0px));
   --gutter-r: max(16px, env(safe-area-inset-right, 0px));
-  --radius: 6px;
+  --radius: 8px;
   color-scheme: light;
 }
 
@@ -538,3 +544,55 @@ fieldset.field { border: 0; padding: 0; margin: 0; }
 .report-list strong { color: var(--navy); }
 .report-list span { color: var(--muted); font-size: 0.96rem; }
 @media (max-width: 720px) { .report-list { grid-template-columns: 1fr; } }
+
+/* Visual do exportlink.com.br: topo e destaque em navy, títulos em Manrope 800, laranja só nos CTAs */
+h1, h2 { font-weight: 800; letter-spacing: -0.02em; }
+.btn { font: 800 1rem/1.2 var(--font-display); }
+.btn--primary { background: var(--orange); color: var(--navy); }
+.btn--primary:hover { background: var(--orange-hover); color: var(--navy); }
+.band--navy .eyebrow { color: var(--green-on-navy); }
+.band--navy .btn--ghost, .hero .btn--ghost { border-color: var(--navy-line); color: var(--white); }
+.band--navy .btn--ghost:hover, .hero .btn--ghost:hover { border-color: var(--on-navy-muted); background: transparent; color: var(--white); }
+:focus-visible { outline-color: var(--green-on-navy); }
+
+body::before { background: var(--navy); }
+.site-header { background: var(--navy); border-bottom-color: var(--navy-line); }
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand__mark { width: 30px; height: 30px; flex: none; }
+.brand__text { display: grid; }
+.brand__name { font: 800 1.25rem/1 var(--font-display); color: var(--white); letter-spacing: -0.01em; }
+.brand__sub { color: var(--on-navy-muted); font-size: 0.62rem; letter-spacing: 0.2em; margin-top: 4px; }
+.nav a { color: var(--on-navy-muted); }
+.nav a:hover, .nav a[aria-current="page"] { color: var(--white); }
+.nav a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--green-on-navy); }
+.lang a, .lang span { color: var(--on-navy-muted); }
+.lang a:hover, .lang [aria-current="true"] { color: var(--white); }
+.lang .sep { color: var(--navy-line); }
+.menu-toggle { border-color: var(--navy-line); color: var(--white); }
+@media (max-width: 1120px) {
+  .nav { background: var(--navy); border-bottom-color: var(--navy-line); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); }
+  .nav a { border-bottom-color: var(--navy-line); }
+  .nav .btn { color: var(--navy); }
+}
+
+.hero { background: var(--navy); color: var(--white); }
+.hero h1, .hero h2, .hero .slide__title { color: var(--white); }
+.hero .lead, .hero p, .hero__note { color: var(--on-navy-muted); }
+.hero .eyebrow { color: var(--green-on-navy); }
+.hero__figure, .hero .doc { color: var(--ink); }
+.hero .doc p { color: inherit; }
+.carousel__btn { background: transparent; border-color: var(--navy-line); color: var(--white); }
+.carousel__btn:hover { border-color: var(--on-navy-muted); }
+.carousel__dot::before { background: var(--navy-line); }
+.carousel__dot[aria-current="true"]::before { background: var(--green-on-navy); }
+.site-footer { background: #071B30; }
+.page-hero { background: var(--navy); color: var(--white); border-bottom-color: var(--navy-line); }
+.page-hero h1, .page-hero h2 { color: var(--white); }
+.page-hero .lead, .page-hero p, .page-hero__brand span { color: var(--on-navy-muted); }
+.page-hero .eyebrow { color: var(--green-on-navy); }
+.page-hero .doc, .page-hero figure { color: var(--ink); }
+.page-hero .doc p { color: inherit; }
+.page-hero .btn--ghost { border-color: var(--navy-line); color: var(--white); }
+.page-hero .btn--ghost:hover { border-color: var(--on-navy-muted); background: transparent; color: var(--white); }
+.brand__sub { white-space: nowrap; }
+@media (max-width: 420px) { .brand__sub { display: none; } }
