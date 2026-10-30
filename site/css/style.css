@@ -608,3 +608,17 @@ body::before { background: var(--navy); }
   .journey__route { animation: journey-flow 1.4s linear infinite; }
   @keyframes journey-flow { to { stroke-dashoffset: -26; } }
 }
+
+/* Submenu de Produtos (Software Export Link e Export Link Docs) */
+.nav-group { position: relative; display: flex; }
+.nav-sub { display: none; }
+@media (min-width: 761px) {
+  .nav-sub { position: absolute; top: 100%; left: 0; min-width: 220px; padding: 8px; background: var(--navy); border: 1px solid var(--navy-line); border-radius: 10px; box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3); z-index: 50; flex-direction: column; }
+  .nav-group:hover .nav-sub, .nav-group:focus-within .nav-sub { display: flex; }
+  .nav-sub a { padding: 10px 12px; white-space: nowrap; border-radius: 6px; }
+  .nav-sub a[aria-current="page"] { box-shadow: none; }
+}
+@media (max-width: 760px) {
+  .nav-group { flex-direction: column; }
+  .nav-sub { display: flex; flex-direction: column; padding-left: 16px; }
+}
