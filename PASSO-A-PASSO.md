@@ -101,7 +101,7 @@ Para acelerar:
 4. No Cloudflare: domínio **exportlink.com.br → DNS → Records → Add record**.
    Type **TXT**, Name `@`, Content: cole o texto do Google. Salve.
 5. Volte ao Search Console e clique em **Verificar** (se falhar, espere 10 minutos e tente de novo).
-6. No menu da esquerda, clique em **Sitemaps**, digite `sitemap.xml` e clique em **Enviar**.
+6. No menu da esquerda, clique em **Sitemaps**, digite o endereço completo `https://www.exportlink.com.br/sitemap.xml` e clique em **Enviar**.
 7. No topo, em **Inspecionar URL**, cole `https://www.exportlink.com.br/` e clique em **Solicitar indexação**.
 
 No começo, pesquise por **"Export Link Pro"** ou **exportlink.com.br**: "export link" sozinho é um termo
