@@ -1,0 +1,60 @@
+  <section class="page-hero" aria-labelledby="ct-title">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h1 id="ct-title">Talk to Export Link</h1>
+      <p class="lead">Tell us what your company exports or wants to export. We'll reply by the email or WhatsApp number you give us.</p>
+    </div>
+  </section>
+
+  <section class="band" aria-label="Contact form and details">
+    <div class="wrap contact">
+      <form class="form" name="contato" method="POST" action="{L}contato/" data-whatsapp data-ok="We opened WhatsApp with your message ready. Just tap send." data-err="We couldn't send your message right now. Please try again or reach us on WhatsApp at +55 41 99264-0066.">
+        <input type="hidden" name="form-name" value="contato">
+        <input type="hidden" name="idioma" value="EN">
+        <p class="hp"><label>Leave this field empty: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="form__row">
+          <div class="field"><label for="f-nome">Name</label><input id="f-nome" name="nome" autocomplete="name" required></div>
+          <div class="field"><label for="f-empresa">Company</label><input id="f-empresa" name="empresa" autocomplete="organization" required></div>
+        </div>
+        <div class="form__row">
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+          <div class="field"><label for="f-whats">WhatsApp</label><input id="f-whats" name="whatsapp" type="tel" autocomplete="tel" placeholder="+1 555 000 0000"></div>
+        </div>
+        <fieldset class="field">
+          <legend>Interested in</legend>
+          <div class="choices">
+            <label><input type="radio" name="interesse" value="Software" id="i-software" checked> Software</label>
+            <label><input type="radio" name="interesse" value="Consultoria" id="i-consultoria"> Ecosystem implementation</label>
+            <label><input type="radio" name="interesse" value="Os dois" id="i-os-dois"> Both</label>
+          </div>
+        </fieldset>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="mensagem" required></textarea>
+          <small>For example: products, destination countries and whether your company already exports.</small></div>
+        <p class="note">We use this information only to reply to you. See our <a href="{L}privacidade/">Privacy Policy</a>.</p>
+        <div><button class="btn btn--primary" type="submit">Send via WhatsApp</button></div>
+        <div class="form-status" role="status" aria-live="polite" hidden></div>
+      </form>
+
+      <aside class="contact-card" aria-label="Contact details">
+        <dl style="display:grid;gap:22px;margin:0">
+          <div class="contact-item">
+            <dt>WhatsApp</dt>
+            <dd><span class="copy-value">+55 41 99264-0066</span><button class="btn-copy" type="button" data-copy="+55 41 99264-0066" data-copied="Copied">Copy</button></dd>
+            <dd><a class="btn btn--wa" data-wa="Hi! I found you through the Export Link website." href="https://wa.me/5541992640066" target="_blank" rel="noopener">{WA_ICON} Open WhatsApp</a></dd>
+          </div>
+          <div class="contact-item">
+            <dt>Email</dt>
+            <dd><span class="copy-value">comercial@exportlink.com.br</span><button class="btn-copy" type="button" data-copy="comercial@exportlink.com.br" data-copied="Copied">Copy</button></dd>
+          </div>
+          <div class="contact-item">
+            <dt>Address</dt>
+            <dd>Rua Gil Stein, 258 · Itajaí · Santa Catarina · Brazil</dd>
+          </div>
+          <div class="contact-item">
+            <dt>Hours</dt>
+            <dd>Monday to Friday, 9 am to 6 pm (Brasília time)<br>Closed Saturday and Sunday</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+  </section>

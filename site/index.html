@@ -3,617 +3,441 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3E%3Crect width=%2730%27 height=%2730%27 rx=%277%27 fill=%27%2300875A%27/%3E%3Cpath d=%27M8 19l5-8 4 5 5-7%27 fill=%27none%27 stroke=%27white%27 stroke-width=%272.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
-<meta property="og:title" content="Export Link Pro">
-<meta property="og:description" content="Proforma, commercial invoice e packing list a partir de uma única digitação.">
-<meta property="og:image" content="https://www.exportlink.com.br/tela-export-link.jpg">
-<meta property="og:url" content="https://www.exportlink.com.br/">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="Export Link Pro">
-<link rel="canonical" href="https://www.exportlink.com.br/">
+<title>Export Link | Suporte à exportação e software para exportar</title>
+<meta name="description" content="A Export Link monta dentro da sua empresa um ecossistema de exportação: método, documentos, preço por Incoterm e um modelo de negócio replicável em vários países.">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.exportlink.com.br/">
+<link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/">
+<link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/">
+<link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/">
+<link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/">
 <meta property="og:type" content="website">
-<title>Export Link Pro | Proforma, Invoice e Packing List para exportação</title>
-<meta name="description" content="Export Link Pro: proforma, commercial invoice e packing list a partir de uma única digitação. Software B2B para departamentos de exportação.">
+<meta property="og:site_name" content="Export Link Global Solutions">
+<meta property="og:title" content="Export Link | Suporte à exportação e software para exportar">
+<meta property="og:description" content="A Export Link monta dentro da sua empresa um ecossistema de exportação: método, documentos, preço por Incoterm e um modelo de negócio replicável em vários países.">
+<meta property="og:url" content="https://www.exportlink.com.br/">
+<meta property="og:image" content="https://www.exportlink.com.br/img/og-image.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="es_LA">
+<meta property="og:locale:alternate" content="en_US">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: B2B SaaS 60-30-10. Hero navy com painel do embarque, blocos brancos/gelo, mapa de rotas, calculadora de ROI. Laranja só nos CTAs.
-   Tema único (paleta definida pelo cliente), cores todas explícitas. */
-:root{
-  --navy:#0A2540;        /* 60% dominante */
-  --navy-2:#12324F;
-  --navy-line:#24476A;
-  --green:#00875A;       /* 30% secundária */
-  --green-soft:#E3F4EC;
-  --green-on-navy:#4FD69C;
-  --orange:#FF6B00;      /* 10% só CTA */
-  --orange-hover:#E85F00;
-  --white:#FFFFFF;
-  --ice:#F4F6F8;
-  --line:#DDE3EA;
-  --text:#0A2540;
-  --muted:#4A5D72;
-  --on-navy:#FFFFFF;
-  --on-navy-muted:#A9BBCE;
-  --display:"Manrope","Segoe UI",system-ui,sans-serif;
-  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--white);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
-a{color:var(--green)}
-:focus-visible{outline:3px solid var(--green-on-navy);outline-offset:3px}
-.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.narrow{max-width:840px}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:inherit}
-h1{font-size:clamp(2.4rem,5.6vw,4.1rem);font-weight:800;line-height:1.05;letter-spacing:-.025em}
-h2{font-size:clamp(1.9rem,3.8vw,2.8rem);font-weight:800;line-height:1.12;letter-spacing:-.02em}
-h3{font-size:1.18rem;font-weight:700;line-height:1.3}
-p{margin:0}
-.kicker{font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
-.lede{font-size:1.15rem;color:var(--muted);max-width:62ch}
-section{padding-block:clamp(64px,8vw,104px)}
-.ice{background:var(--ice)}
-.sec-head{display:grid;gap:14px;margin-bottom:48px;max-width:780px}
-.sec-head.center{text-align:center;justify-items:center;margin-inline:auto}
-.sec-head.center .lede{margin-inline:auto}
-
-/* CTA: único uso do laranja */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:800;font-size:1rem;padding:14px 24px;border-radius:8px;text-decoration:none;cursor:pointer;border:2px solid transparent;text-align:center;transition:background .15s,transform .15s}
-.btn-cta{background:var(--orange);color:var(--navy)}
-.btn-cta:hover{background:var(--orange-hover);transform:translateY(-1px)}
-.btn-ghost{border-color:var(--navy-line);color:var(--on-navy);background:transparent}
-.btn-ghost:hover{border-color:var(--on-navy-muted)}
-.btn-sm{padding:9px 16px;font-size:.92rem}
-.cta-note{font-size:.9rem;color:var(--muted)}
-
-/* topo */
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--navy)}
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--navy);color:var(--on-navy);border-bottom:1px solid var(--navy-line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.2rem;color:var(--on-navy);text-decoration:none;letter-spacing:-.01em}
-.brand svg{width:30px;height:30px;flex:none}
-.top nav{display:flex;gap:26px;font-size:.95rem}
-.top nav a{color:var(--on-navy-muted);text-decoration:none}
-.top nav a:hover{color:var(--on-navy)}
-@media (max-width:820px){.top nav{display:none}}
-
-/* hero */
-.hero{background:var(--navy);color:var(--on-navy);padding-block:clamp(48px,7vw,88px) clamp(64px,8vw,104px);overflow:hidden}
-.hero .wrap{display:grid;gap:clamp(32px,5vw,64px)}
-.hero-copy{max-width:860px;margin-inline:auto;text-align:center;justify-items:center}
-.hero-copy .lede{margin-inline:auto}
-.hero-ctas,.checks{justify-content:center}
-.shot-wrap{margin-top:clamp(40px,6vw,64px)}
-.shot{margin:0;background:var(--white);border-radius:14px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 0 1px var(--navy-line)}
-.shot-bar{display:flex;align-items:center;gap:14px;padding:10px 16px;background:var(--ice);border-bottom:1px solid var(--line);font-size:.8rem;color:var(--muted)}
-.shot img{display:block;width:100%;height:auto;max-width:100%}
-.shot figcaption{font-family:var(--mono);font-size:.72rem;color:var(--muted);padding:8px 16px;background:var(--ice);border-top:1px solid var(--line)}
-.hero-copy{display:grid;gap:24px;min-width:0}
-.hero .kicker{color:var(--green-on-navy)}
-.hero .lede{color:var(--on-navy-muted)}
-.hero h1 span{color:var(--green-on-navy)}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
-.checks{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.93rem;color:var(--on-navy-muted);list-style:none;margin:0;padding:0}
-.checks li{display:flex;gap:7px;align-items:center}
-.checks svg{width:16px;height:16px;color:var(--green-on-navy);flex:none}
-@media (max-width:960px){.hero .wrap{grid-template-columns:1fr}}
-
-/* painel do embarque (widget do hero) */
-.panel{background:var(--white);color:var(--text);border-radius:14px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);overflow:hidden;min-width:0}
-.panel-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 18px;border-bottom:1px solid var(--line);font-size:.82rem}
-.panel-bar b{font-family:var(--display);font-size:.95rem}
-.dots{display:flex;gap:5px}.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
-.panel-body{padding:18px;display:grid;gap:16px}
-.route-strip{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
-.route-strip b{color:var(--text);font-weight:500}
-.route-strip .line{flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--green) 0 6px,transparent 6px 11px);position:relative;min-width:30px}
-.route-strip .line::after{content:"";position:absolute;right:-2px;top:-4px;border:5px solid transparent;border-left-color:var(--green)}
-.docs-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.doc-tile{border:1px solid var(--line);border-radius:10px;padding:12px;display:grid;gap:6px;min-width:0}
-.doc-tile .t{font-family:var(--display);font-weight:700;font-size:.88rem}
-.badge{justify-self:start;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:99px;background:var(--green-soft);color:var(--green)}
-.doc-tile .meta{font-family:var(--mono);font-size:.7rem;color:var(--muted)}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.kpis div{background:var(--ice);padding:10px 12px;min-width:0}
-.kpis span{display:block;font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-.kpis b{font-family:var(--mono);font-weight:500;font-size:.98rem;font-variant-numeric:tabular-nums}
-.items{width:100%;border-collapse:collapse;font-size:.78rem;font-variant-numeric:tabular-nums}
-.items th{font-weight:500;text-align:left;color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;padding:0 6px 6px;border-bottom:1px solid var(--line)}
-.items td{padding:7px 6px;border-bottom:1px solid var(--ice)}
-.items .n{text-align:right;white-space:nowrap}
-.items-wrap{overflow-x:auto}
-.panel-foot{display:flex;justify-content:space-between;gap:10px;font-size:.72rem;color:var(--muted);padding:10px 18px;background:var(--ice)}
-.sync{display:flex;align-items:center;gap:6px;color:var(--green);font-weight:600}
-.sync::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
-@media (max-width:520px){.docs-row{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
-
-/* faixa de documentos */
-.strip{border-bottom:1px solid var(--line)}
-.strip .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 36px;padding-block:22px;font-family:var(--display);font-weight:700;color:var(--muted);font-size:.95rem}
-.strip span:first-child{font-family:var(--body);font-weight:500;font-size:.85rem}
-
-/* dores */
-.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:26px;display:grid;gap:10px;align-content:start;min-width:0}
-.card p{color:var(--muted);font-size:.98rem}
-.ico{width:44px;height:44px;border-radius:10px;background:var(--green-soft);color:var(--green);display:grid;place-items:center}
-.ico svg{width:22px;height:22px}
-@media (max-width:900px){.pains{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.pains{grid-template-columns:1fr}}
-
-/* fluxo */
-.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;list-style:none;margin:0;padding:0;counter-reset:s}
-.flow li{position:relative;display:grid;gap:8px;align-content:start;padding:20px 16px;border:1px solid var(--line);border-radius:12px;background:var(--white);min-width:0}
-.flow li::before{counter-increment:s;content:"0" counter(s);font-family:var(--mono);font-size:.78rem;color:var(--green);font-weight:500}
-.flow p{font-size:.9rem;color:var(--muted)}
-.flow li:not(:last-child)::after{content:"";position:absolute;top:50%;right:-11px;width:8px;height:8px;border-top:2px solid var(--green);border-right:2px solid var(--green);transform:translateY(-50%) rotate(45deg)}
-@media (max-width:1020px){.flow{grid-template-columns:repeat(3,1fr)}.flow li::after{display:none}}
-@media (max-width:600px){.flow{grid-template-columns:1fr}}
-
-/* mapa */
-.mapsec{background:var(--navy);color:var(--on-navy)}
-.mapsec .kicker{color:var(--green-on-navy)}
-.mapsec .lede{color:var(--on-navy-muted)}
-.map-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:28px;align-items:stretch}
-.map-card{background:var(--navy-2);border:1px solid var(--navy-line);border-radius:14px;padding:16px;min-width:0}
-.map-card svg{width:100%;height:auto;display:block}
-.map-note{font-family:var(--mono);font-size:.72rem;color:var(--on-navy-muted);margin-top:8px}
-.port-list{display:grid;gap:10px;align-content:start;list-style:none;margin:0;padding:0}
-.port-list li{display:grid;grid-template-columns:1fr auto;gap:4px 10px;background:var(--navy-2);border:1px solid var(--navy-line);border-radius:10px;padding:12px 14px}
-.port-list b{font-family:var(--display);font-weight:700;font-size:.95rem}
-.port-list span{font-family:var(--mono);font-size:.72rem;color:var(--on-navy-muted)}
-.port-list em{grid-column:1 / -1;font-style:normal;font-size:.82rem;color:var(--green-on-navy)}
-@media (max-width:900px){.map-grid{grid-template-columns:1fr}.port-list{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.port-list{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:no-preference){.route-path{stroke-dasharray:5 6;animation:flow 1.6s linear infinite}@keyframes flow{to{stroke-dashoffset:-22}}}
-
-/* recursos */
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media (max-width:900px){.features{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.features{grid-template-columns:1fr}}
-.mid-cta{margin-top:40px;display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center}
-
-/* ROI */
-.roi{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
-.roi-form{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;gap:18px;min-width:0}
-.field{display:grid;gap:6px}
-.field label{font-weight:600;font-size:.93rem}
-.field .row{display:flex;align-items:center;gap:12px}
-.field input[type=range]{flex:1;accent-color:var(--green);min-width:0}
-.field output{font-family:var(--mono);font-size:.95rem;min-width:4.5ch;text-align:right;font-variant-numeric:tabular-nums}
-.assume{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
-.roi-out{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;gap:22px;min-width:0}
-.big{display:flex;flex-wrap:wrap;gap:8px 28px}
-.big div{display:grid}
-.big b{font-family:var(--display);font-size:clamp(2rem,4vw,2.8rem);font-weight:800;color:var(--green);line-height:1.1;font-variant-numeric:tabular-nums}
-.big span{font-size:.88rem;color:var(--muted)}
-.bars{display:grid;gap:14px}
-.bar{display:grid;gap:6px}
-.bar-head{display:flex;justify-content:space-between;font-size:.88rem}
-.bar-head b{font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums}
-.track{height:14px;background:var(--ice);border-radius:99px;overflow:hidden}
-.fill{height:100%;border-radius:99px;transition:width .3s}
-.fill.now{background:var(--navy)}
-.fill.pro{background:var(--green)}
-@media (max-width:900px){.roi{grid-template-columns:1fr}}
-
-/* origem + para quem */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.split .card ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
-.split li{display:grid;grid-template-columns:20px 1fr;gap:8px}
-.split li svg{width:18px;height:18px;margin-top:4px}
-.yes svg{color:var(--green)}
-.no svg{color:var(--muted)}
-@media (max-width:760px){.split{grid-template-columns:1fr}}
-.origin{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;border-left:4px solid var(--green);padding-left:28px;max-width:900px}
-.origin blockquote{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.2;letter-spacing:-.015em}
-.origin p{color:var(--muted);margin-top:12px}
-
-/* oferta */
-.offer{display:grid;grid-template-columns:1.25fr .75fr;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--white)}
-.offer > div{padding:clamp(24px,3.5vw,40px);display:grid;gap:16px;align-content:start;min-width:0}
-.offer > div+div{background:var(--navy);color:var(--on-navy)}
-.offer ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
-.offer ul li{display:grid;grid-template-columns:22px 1fr;gap:8px}
-.offer ol li{display:list-item}
-.offer li svg{width:18px;height:18px;color:var(--green);margin-top:4px}
-.price{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1}
-.offer .kicker{color:var(--green-on-navy)}
-.offer ol{margin:0;padding-left:20px;display:grid;gap:8px;color:var(--on-navy-muted)}
-.todo{justify-self:start;font-family:var(--mono);font-size:.72rem;color:var(--on-navy-muted);border:1px dashed var(--on-navy-muted);padding:3px 8px;border-radius:4px}
-@media (max-width:820px){.offer{grid-template-columns:1fr}}
-
-/* faq */
-.faq details{border-bottom:1px solid var(--line);padding-block:18px}
-.faq summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.08rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--green);font-size:1.3rem;line-height:1}
-.faq details[open] summary::after{content:"−"}
-.faq details p{margin-top:10px;color:var(--muted);max-width:68ch}
-
-/* cta final */
-.final{background:var(--navy);color:var(--on-navy)}
-.final .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
-.final p{color:var(--on-navy-muted);font-size:1.1rem;max-width:52ch;margin-top:16px}
-.final form{background:var(--white);color:var(--text);border-radius:14px;padding:26px;display:grid;gap:10px;min-width:0}
-.final label{font-weight:600;font-size:.9rem}
-.final input{width:100%;font:inherit;padding:11px 13px;border:1px solid var(--line);border-radius:8px;background:var(--white);color:var(--text)}
-.final input:focus{outline:2px solid var(--green);border-color:var(--green)}
-.final .btn{margin-top:8px}
-.ok{font-size:.9rem;color:var(--green);font-weight:600}
-@media (max-width:860px){.final .wrap{grid-template-columns:1fr}}
-
-.contato-direto{font-size:1rem!important}
-.contato-direto a,footer a{color:var(--green-on-navy)}
-footer{background:var(--navy);color:var(--on-navy-muted);border-top:1px solid var(--navy-line);font-size:.88rem}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:24px}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500&display=swap">
+<link rel="stylesheet" href="css/style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Export Link Pro","url":"https://www.exportlink.com.br/",
-"applicationCategory":"BusinessApplication","operatingSystem":"Web",
-"description":"Software para departamentos de exportação: proforma invoice, commercial invoice e packing list a partir de uma única digitação, com formação de preço por Incoterm.",
-"inLanguage":"pt-BR","offers":{"@type":"Offer","priceCurrency":"BRL","availability":"https://schema.org/InStock","description":"Sob consulta"},
-"provider":{"@type":"Organization","name":"Export Link Pro","url":"https://www.exportlink.com.br/","email":"comercial@exportlink.com.br","telephone":"+55-41-99264-0066"}}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.exportlink.com.br/#org",
+      "name": "Export Link Global Solutions",
+      "url": "https://www.exportlink.com.br/",
+      "logo": "https://www.exportlink.com.br/img/exportdocspro-simbolo.svg",
+      "email": "comercial@exportlink.com.br",
+      "telephone": "+55 41 99264-0066",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Gil Stein, 258",
+        "addressLocality": "Itajaí",
+        "addressRegion": "SC",
+        "addressCountry": "BR"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Cassiano Pajewski"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Export Link Docs",
+      "alternateName": "Export Docs Pro",
+      "applicationCategory": "BusinessApplication",
+      "inLanguage": "pt-BR",
+      "description": "Proforma, commercial invoice e packing list em PDF e Excel, cadastros com validação fiscal das Américas e formação de preço por Incoterm, inclusive DDP para os EUA.",
+      "publisher": {
+        "@id": "https://www.exportlink.com.br/#org"
+      }
+    }
+  ]
+}
 </script>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-dash" viewBox="0 0 24 24"><path d="M6 12h12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
-  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z M14 3v5h5 M10 13h6 M10 17h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-  <symbol id="i-copy" viewBox="0 0 24 24"><path d="M9 9h11v11H9z M5 15H4V4h11v1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16 M6 20h12 M4 8h16 M6 8l-3 6h6z M18 8l-3 6h6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V4 M4 20h16 M8 16v-4 M12 16V8 M16 16v-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 6h6l2 2h10v11H3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-  <symbol id="i-team" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6 M16 5a3 3 0 010 6 M18 14c2 .7 3 3 3 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
-  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 12h18 M12 3c3 3.5 3 14.5 0 18 M12 3c-3 3.5-3 14.5 0 18" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
-  <symbol id="i-lang" viewBox="0 0 24 24"><path d="M4 5h9 M8.5 3v2 M6 5c1 4 3.5 7 7 8.5 M11 5c-1 4-3.5 7-7 8.5 M13 21l4-9 4 9 M14.5 18h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
-  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7l9-4 9 4v10l-9 4-9-4z M3 7l9 4 9-4 M12 11v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
-  <symbol id="i-price" viewBox="0 0 24 24"><path d="M3 12l9-9h8v8l-9 9z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="16" cy="8" r="1.6" fill="currentColor"/></symbol>
-  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 11V8a4 4 0 018 0v3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
-</svg>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="top">
+<header class="site-header">
   <div class="wrap">
-    <a class="brand" href="#inicio">
-      <svg viewBox="0 0 30 30" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="7" fill="#00875A"/><path d="M8 19l5-8 4 5 5-7" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Export Link Pro
+    <a class="brand" href="./" aria-label="Export Link Global Solutions, página inicial">
+      <span class="brand__name">Export Link</span>
+      <span class="brand__sub">Global Solutions</span>
     </a>
-    <nav aria-label="Seções">
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#rotas">Rotas</a>
-      <a href="#roi">Economia</a>
-      <a href="#faq">Perguntas</a>
+    <nav id="site-nav" class="nav" aria-label="Principal">
+      <a href="./" aria-current="page">Início</a>
+      <a href="software/">Software</a>
+      <a href="consultoria/">Como trabalhamos</a>
+      <a href="sobre/">Sobre</a>
+      <a href="contato/">Contato</a>
+      <a class="btn btn--primary nav-cta-mobile" href="contato/?interesse=software">Solicitar demonstração</a>
     </nav>
-    <a class="btn btn-cta btn-sm" href="#contato">Agendar demonstração</a>
+    <div class="lang" aria-label="Idioma">
+      <span aria-current="true" lang="pt-BR">PT</span><span class="sep">|</span><a href="es/" lang="es" hreflang="es">ES</a><span class="sep">|</span><a href="en/" lang="en" hreflang="en">EN</a>
+    </div>
+    <a class="btn btn--primary header-cta" href="contato/?interesse=software">Solicitar demonstração</a>
+    <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
   </div>
 </header>
 
-<main id="inicio">
-  <section class="hero">
-    <div class="wrap">
-      <div class="hero-copy">
-        <p class="kicker">Software para departamentos de exportação</p>
-        <h1>Digite o pedido uma vez. <span>Receba os três documentos.</span></h1>
-        <p class="lede">Proforma invoice, commercial invoice e packing list gerados da mesma fonte, sem redigitar cliente, itens, pesos ou preços. Menos erro no embarque e um departamento que funciona igual com qualquer pessoa no comando.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-cta" href="#contato">Agendar demonstração gratuita</a>
-          <a class="btn btn-ghost" href="#como-funciona">Ver como funciona</a>
+<main id="conteudo">
+<section class="hero carousel" aria-roledescription="carrossel" aria-label="Destaques">
+    <div class="carousel__track" aria-live="off">
+      <div class="slide is-active" id="slide-1" role="group" aria-roledescription="slide" aria-label="1 de 3: Export Link Docs">
+        <div class="wrap slide__inner">
+          <div class="hero__text">
+            <p class="eyebrow">Export Link Docs · software de exportação</p>
+            <h1 id="hero-title">Exporte com método, documentos certos e preço calculado.</h1>
+            <p class="lead">O Export Link Docs gera proforma, commercial invoice e packing list em minutos e calcula o preço de exportação por Incoterm.</p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="contato/?interesse=software">Solicitar demonstração</a>
+              <a class="btn btn--wa" data-wa="Olá! Vim pelo site e quero saber mais sobre o Export Link Docs." href="https://wa.me/5541992640066" target="_blank" rel="noopener">
+                <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+                Falar no WhatsApp
+              </a>
+            </div>
+            <p class="hero__note">Feito por quem trabalha com exportação desde 2001.</p>
+          </div>
+          <figure class="hero__figure" style="margin:0;min-width:0">
+            <div class="doc" role="img" aria-label="Exemplo de proforma gerada no Export Link Docs, com dados fictícios: venda FOB Itajaí para um importador no Chile, três itens de móveis com NCM, total de 20.520,00 dólares.">
+              <div class="doc__bar" aria-hidden="true"><i></i><i></i><i></i><span>Export Link Docs · Proforma</span></div>
+              <div class="doc__body" aria-hidden="true">
+                <div class="doc__head">
+                  <div>
+                    <div class="doc__title">PROFORMA INVOICE</div>
+                    <div class="doc__num">Nº PI-2026-0148 · 12/10/2026</div>
+                  </div>
+                  <span class="doc__chip">FOB Itajaí</span>
+                </div>
+                <dl class="doc__meta">
+                  <div><dt>Exportador</dt><dd>Indústria de móveis</dd></div>
+                  <div><dt>Importador</dt><dd>Distribuidora · Santiago, CL</dd></div>
+                  <div><dt>RUT</dt><dd>76.xxx.xxx-K ✓</dd></div>
+                </dl>
+                <div class="doc__table-wrap">
+                  <table>
+                    <thead><tr><th>Descripción</th><th>NCM / HS</th><th class="num">Cant.</th><th class="num">USD</th></tr></thead>
+                    <tbody>
+                      <tr><td>Mesa de comedor de madera maciza 1,80 m</td><td>9403.60.00</td><td class="num">40 un</td><td class="num">11.400,00</td></tr>
+                      <tr><td>Silla tapizada con estructura de madera</td><td>9401.61.00</td><td class="num">240 un</td><td class="num">7.800,00</td></tr>
+                      <tr><td>Aparador de madera 1,60 m</td><td>9403.60.00</td><td class="num">15 un</td><td class="num">1.320,00</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="doc__totals">
+                  <div><small>Peso bruto</small><strong>5.310 kg</strong></div>
+                  <div><small>Volume</small><strong>59,2 m³</strong></div>
+                  <div><small>Volumes</small><strong>175</strong></div>
+                  <div class="total"><small>Total FOB</small><strong>USD 20.520,00</strong></div>
+                </div>
+              </div>
+            </div>
+            <figcaption class="doc-caption">Tela ilustrativa com dados fictícios. Descrições traduzidas para o espanhol.</figcaption>
+          </figure>
         </div>
-        <ul class="checks">
-          <li><svg><use href="#i-check"/></svg>PDF e Excel no padrão A4</li>
-          <li><svg><use href="#i-check"/></svg>Documentos em espanhol</li>
-          <li><svg><use href="#i-check"/></svg>Acesso online para a equipe</li>
+      </div>
+      <div class="slide" inert aria-hidden="true" id="slide-2" role="group" aria-roledescription="slide" aria-label="2 de 3: O que é a Export Link">
+        <div class="wrap slide__inner">
+          <div class="hero__text">
+            <p class="eyebrow">O que é a Export Link</p>
+            <h2 class="slide__title">Um ecossistema de exportação dentro da sua empresa</h2>
+            <p class="lead">A Export Link é uma empresa de suporte à exportação. Montamos método, documentos e preço em um modelo de negócio com o DNA da sua empresa, pronto para ser replicado em vários países.</p>
+            <div class="btn-row">
+              <a class="btn btn--primary" href="#ecossistema">Conhecer o modelo</a>
+              <a class="btn btn--ghost" href="consultoria/">Como trabalhamos</a>
+            </div>
+          </div>
+          <div class="hero__figure">
+            <div class="doc" role="img" aria-label="Ilustração: modelo de exportação de uma indústria de móveis com método definido, documentos padronizados, preço calculado e o mesmo modelo levado do Brasil ao Chile, Colômbia, México e Estados Unidos.">
+              <div class="doc__bar" aria-hidden="true"><i></i><i></i><i></i><span>Modelo de exportação</span></div>
+              <div class="doc__body" aria-hidden="true">
+                <div class="doc__head"><div><div class="doc__title">Modelo de exportação</div><div class="doc__num">Indústria de móveis</div></div><span class="doc__chip">DNA</span></div>
+                <div class="price-lines model-lines"><div><span>Método</span><span class="ok">✓ Definido</span></div><div><span>Documentos</span><span class="ok">✓ Padronizados</span></div><div><span>Preço por Incoterm</span><span class="ok">✓ Calculado</span></div></div>
+                <div class="model-markets"><small>Mercados</small><div class="inco-tabs"><span class="on">Brasil</span><span>Chile</span><span>Colômbia</span><span>México</span><span>EUA</span></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide" inert aria-hidden="true" id="slide-3" role="group" aria-roledescription="slide" aria-label="3 de 3: Feiras e rodadas de negócios">
+        <div class="wrap slide__inner">
+          <div class="hero__text">
+            <p class="eyebrow">Feiras e rodadas de negócios</p>
+            <h2 class="slide__title">Leve a sua empresa a feiras e rodadas de negócios internacionais</h2>
+            <p class="lead">Apoio para expor em feiras e participar de rodadas de negócios no exterior, com a sua empresa pronta para apresentar produtos, preços por Incoterm e proformas na hora.</p>
+            <div class="btn-row">
+              <a class="btn btn--wa" data-wa="Olá! Quero saber mais sobre o apoio para feiras e rodadas de negócios internacionais." href="https://wa.me/5541992640066" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg> Falar sobre feiras e rodadas</a>
+            </div>
+          </div>
+          <div class="hero__figure">
+            <div class="doc" role="img" aria-label="Ilustração: agenda fictícia de uma rodada de negócios com quatro reuniões com compradores do Chile, Colômbia, Estados Unidos e México.">
+              <div class="doc__bar" aria-hidden="true"><i></i><i></i><i></i><span>Rodada de negócios · Agenda</span></div>
+              <div class="doc__body" aria-hidden="true">
+                <div class="doc__head"><div><div class="doc__title">Rodada de negócios · Agenda</div></div></div>
+                <ol class="agenda"><li><b>09:00</b><span>Distribuidora</span><small>Santiago, CL</small></li><li><b>09:30</b><span>Importador</span><small>Bogotá, CO</small></li><li><b>10:00</b><span>Rede varejista</span><small>Miami, US</small></li><li><b>10:30</b><span>Importador</span><small>Cidade do México, MX</small></li></ol>
+                <div class="doc__row"><span>✓ Catálogo em PT · ES · EN</span><span>✓ Preços FOB e DDP prontos</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap carousel__controls">
+      <button type="button" class="carousel__btn" data-prev aria-label="Slide anterior"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+      <div class="carousel__dots"><button type="button" class="carousel__dot" data-go="1" aria-label="Ir para o slide 1: Export Link Docs" aria-current="true"></button><button type="button" class="carousel__dot" data-go="2" aria-label="Ir para o slide 2: O que é a Export Link"></button><button type="button" class="carousel__dot" data-go="3" aria-label="Ir para o slide 3: Feiras e rodadas de negócios"></button></div>
+      <button type="button" class="carousel__btn" data-next aria-label="Próximo slide"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+      <button type="button" class="carousel__btn carousel__pause" data-pause aria-label="Pausar a troca automática" data-label-pause="Pausar a troca automática" data-label-play="Retomar a troca automática"><svg class="icon i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"/><rect x="14" y="5" width="4" height="14" rx="1"/></svg><svg class="icon i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg></button>
+    </div>
+  </section>
+
+  <section class="slogan" aria-label="Slogan do software">
+    <div class="wrap">
+      <img src="img/exportdocspro-simbolo.svg" alt="Selo do Export Link Docs" width="56" height="56">
+      <p lang="en">Your export documents in minutes<small>Export Link Docs</small></p>
+    </div>
+  </section>
+
+  <section id="ecossistema" class="band" aria-labelledby="eco-title">
+    <div class="wrap">
+      <div class="eco">
+        <div class="eco__intro">
+          <p class="eyebrow">O que é a Export Link</p>
+          <h2 id="eco-title">Uma empresa de suporte à exportação</h2>
+          <p class="lead">Montamos dentro da sua empresa um ecossistema de exportação completo. O resultado é um modelo de negócio que pode ser replicado em diferentes países.</p>
+          <div><a class="btn btn--ghost" href="contato/">Falar sobre o modelo para a sua empresa</a></div>
+        </div>
+        <ul class="eco__pillars" aria-label="O que compõe o ecossistema de exportação">
+          <li><h3>Método</h3><p>Um processo de exportação definido, do primeiro contato com o importador até o embarque.</p></li>
+          <li><h3>Documentos</h3><p>Proforma, commercial invoice e packing list padronizados no Export Link Docs.</p></li>
+          <li><h3>Preço</h3><p>Formação de preço por regime tributário, modal e Incoterm, igual para toda a equipe.</p></li>
+          <li><h3>Modelo replicável</h3><p>A mesma base para cada novo mercado, ajustada ao documento fiscal, ao idioma e aos custos do país.</p></li>
         </ul>
       </div>
-
-    </div>
-    <div class="wrap shot-wrap">
-      <figure class="shot">
-        <div class="shot-bar"><div class="dots"><i></i><i></i><i></i></div><span>Export Link Pro · Proforma</span></div>
-        <img src="tela-export-link.jpg" width="2160" height="1805" alt="Tela do Export Link Pro: proforma EXP-0142/26 para Muebles Andinos S.A.C., com cliente, dados da proforma e três itens de móveis totalizando US$ 28.320,00">
-        <figcaption>Tela real do sistema, com dados de exemplo.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <div class="strip">
-    <div class="wrap">
-      <span>Documentos gerados pelo sistema</span>
-      <span>Proforma Invoice</span><span>Commercial Invoice</span><span>Packing List</span><span>Formação de Preço</span>
-    </div>
-  </div>
-
-  <section class="ice">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">O problema</p>
-        <h2>Exportar já é difícil. Os documentos não deveriam ser.</h2>
-        <p class="lede">Cada um destes problemas custa horas, gera retrabalho e coloca o embarque em risco.</p>
-      </div>
-      <div class="pains">
-        <div class="card"><span class="ico"><svg><use href="#i-doc"/></svg></span><h3>O pedido chega errado</h3><p>O cliente manda códigos que não existem no seu cadastro, e alguém passa a tarde fazendo o de-para.</p></div>
-        <div class="card"><span class="ico"><svg><use href="#i-copy"/></svg></span><h3>Tudo é digitado três vezes</h3><p>Cliente, itens e condições vão para a proforma, depois para a invoice, depois para o packing list.</p></div>
-        <div class="card"><span class="ico"><svg><use href="#i-scale"/></svg></span><h3>Os números não batem</h3><p>O peso da invoice é diferente do packing list, e o despachante devolve o documento às vésperas do embarque.</p></div>
-        <div class="card"><span class="ico"><svg><use href="#i-price"/></svg></span><h3>O preço mora numa planilha</h3><p>A formação de preço por Incoterm está no computador de uma pessoa, sem histórico por cliente.</p></div>
-        <div class="card"><span class="ico"><svg><use href="#i-folder"/></svg></span><h3>Ninguém acha nada</h3><p>A proforma do ano passado está no e-mail de alguém, numa pasta pessoal ou em lugar nenhum.</p></div>
-        <div class="card"><span class="ico"><svg><use href="#i-team"/></svg></span><h3>O conhecimento sai com a pessoa</h3><p>Quando alguém do time sai de férias ou deixa a empresa, o departamento para.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="como-funciona">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">Como funciona</p>
-        <h2>Do pedido ao arquivo em seis etapas</h2>
-        <p class="lede">A proforma é a fonte única. Exportador, importador, transporte, itens e preços são preenchidos uma vez e seguem sozinhos para os próximos documentos.</p>
-      </div>
-      <ol class="flow">
-        <li><h3>Pedido</h3><p>Importe o pedido do cliente em PDF, Excel ou Word. Os códigos já entram certos.</p></li>
-        <li><h3>Preço</h3><p>Preço de exportação em todos os Incoterms, lado a lado, salvo por cliente.</p></li>
-        <li><h3>Proforma</h3><p>Descrição traduzida, NCM, unidade e preço da tabela, com aceite do cliente.</p></li>
-        <li><h3>Invoice</h3><p>Gerada da proforma em um clique, com os dados travados.</p></li>
-        <li><h3>Packing</h3><p>Volumes, pesos e m³ calculados pela base de embalagens.</p></li>
-        <li><h3>Arquivo</h3><p>PDFs, Excel e pedido original na pasta do cliente.</p></li>
-      </ol>
-    </div>
-  </section>
-
-  <section class="mapsec" id="rotas">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">Clientes no mundo todo</p>
-        <h2>Cada destino com o documento fiscal certo</h2>
-        <p class="lede">O cadastro de clientes muda conforme o país: CUIT, RUT, NIT, RUC, RFC, EIN e outros, com máscara e conferência do dígito verificador. O documento sai com o nome correto para cada destino.</p>
-      </div>
-      <div class="map-grid">
-        <div class="map-card">
-          <svg id="map" viewBox="0 0 600 420" role="img" aria-label="Mapa de rotas de exportação a partir de Itajaí"></svg>
-          <p class="map-note">Rotas de exemplo a partir de um porto brasileiro.</p>
+      <div class="dna">
+        <div class="dna__text">
+          <h3>O DNA da sua empresa está no modelo</h3>
+          <p>Produtos, posicionamento, política de preço e a forma de atender o cliente ficam registrados no modelo de negócio. Cada novo país começa com essa base, e não do zero.</p>
         </div>
-        <ul class="port-list">
-          <li><b>Argentina</b><span>Buenos Aires</span><em>CUIT</em></li>
-          <li><b>Chile</b><span>San Antonio</span><em>RUT</em></li>
-          <li><b>Peru</b><span>Callao</span><em>RUC</em></li>
-          <li><b>Colômbia</b><span>Cartagena</span><em>NIT</em></li>
-          <li><b>México</b><span>Manzanillo</span><em>RFC</em></li>
-          <li><b>Estados Unidos</b><span>Miami</span><em>EIN</em></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">Recursos</p>
-        <h2>Organização que o time inteiro sente</h2>
-      </div>
-      <div class="features">
-        <div class="card"><span class="ico"><svg><use href="#i-scale"/></svg></span><h3>Documentos que conferem</h3><p>Invoice e packing list saem da mesma fonte. Peso, volumes e itens sempre batem.</p></div>
-        <div class="card"><span class="ico"><svg><use href="#i-chart"/></svg></span><h3>Formação de preço</h3><p>Do mercado interno ou do custo até o preço final em cada Incoterm, com histórico por cliente.</p></div>
-        <div class="card"><span class="ico"><svg><use href="#i-lang"/></svg></span><h3>Catálogo traduzido</h3><p>Descrições em espanhol prontas, com o original em português para conferência.</p></div>
-        <div class="card"><span class="ico"><svg><use href="#i-box"/></svg></span><h3>Base de embalagens</h3><p>Unidades por embalagem, peso, tara e medidas por código. O packing list sai calculado.</p></div>
-        <div class="card"><span class="ico"><svg><use href="#i-folder"/></svg></span><h3>Arquivo automático</h3><p>Uma pasta por cliente e por proforma, com PDFs, Excel e o pedido original.</p></div>
-        <div class="card"><span class="ico"><svg><use href="#i-lock"/></svg></span><h3>Online e seguro</h3><p>Base única na nuvem, com login para usuários autorizados e arquivos privados.</p></div>
-      </div>
-      <div class="mid-cta">
-        <a class="btn btn-cta" href="#contato">Quero ver com os meus documentos</a>
-        <span class="cta-note">Demonstração de 30 minutos, sem compromisso.</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="ice" id="roi">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="kicker">Calcule a economia</p>
-        <h2>Quanto tempo o seu time gasta redigitando?</h2>
-        <p class="lede">Ajuste os números da sua operação. O cálculo compara montar três documentos à mão com digitar uma vez e conferir.</p>
-      </div>
-      <div class="roi">
-        <form class="roi-form" id="roi-form" aria-label="Dados da sua operação">
-          <div class="field">
-            <label for="roi-emb">Embarques por mês</label>
-            <div class="row"><input type="range" id="roi-emb" min="2" max="100" value="20"><output id="o-emb" for="roi-emb">20</output></div>
-          </div>
-          <div class="field">
-            <label for="roi-min">Minutos para montar cada documento hoje</label>
-            <div class="row"><input type="range" id="roi-min" min="10" max="120" step="5" value="40"><output id="o-min" for="roi-min">40</output></div>
-          </div>
-          <div class="field">
-            <label for="roi-custo">Custo da hora do analista (R$)</label>
-            <div class="row"><input type="range" id="roi-custo" min="30" max="200" step="5" value="60"><output id="o-custo" for="roi-custo">60</output></div>
-          </div>
-          <p class="assume">Premissas: hoje são 3 documentos por embarque (proforma, invoice e packing list). Com o Export Link Pro, conta-se uma digitação do pedido mais 10 minutos de conferência. É uma estimativa para orientar a conversa, não uma promessa de resultado.</p>
-        </form>
-        <div class="roi-out" aria-live="polite">
-          <div class="big">
-            <div><b id="r-horas">0 h</b><span>economizadas por mês</span></div>
-            <div><b id="r-valor">R$ 0</b><span>em horas de analista por ano</span></div>
-          </div>
-          <div class="bars">
-            <div class="bar"><div class="bar-head"><span>Hoje</span><b id="r-hoje">0 h/mês</b></div><div class="track"><div class="fill now" id="b-hoje"></div></div></div>
-            <div class="bar"><div class="bar-head"><span>Com Export Link Pro</span><b id="r-pro">0 h/mês</b></div><div class="track"><div class="fill pro" id="b-pro"></div></div></div>
-          </div>
-          <a class="btn btn-cta" href="#contato">Validar com os meus números</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div class="wrap" style="display:grid;gap:64px">
-      <div class="origin">
-        <span class="ico"><svg><use href="#i-globe"/></svg></span>
-        <div>
-          <blockquote>Nasceu dentro de um departamento de exportação, não numa sala de reunião.</blockquote>
-          <p>O Export Link Pro foi criado por um profissional de comércio exterior para resolver os problemas do próprio dia a dia em uma indústria brasileira que exporta para a América Latina. Cada função existe porque fez falta num embarque real.</p>
-        </div>
-      </div>
-      <div>
-        <div class="sec-head"><p class="kicker">Para quem é</p><h2>Feito para quem emite documentos toda semana</h2></div>
-        <div class="split">
-          <div class="card yes"><h3>É para você se</h3><ul>
-            <li><svg><use href="#i-check"/></svg>Sua empresa exporta com frequência e emite proforma, invoice e packing list.</li>
-            <li><svg><use href="#i-check"/></svg>Seu catálogo tem dezenas ou centenas de produtos.</li>
-            <li><svg><use href="#i-check"/></svg>Você vende para vários países com documentos fiscais diferentes.</li>
-            <li><svg><use href="#i-check"/></svg>O departamento depende de planilhas e de uma ou duas pessoas-chave.</li>
-          </ul></div>
-          <div class="card no"><h3>Talvez não seja se</h3><ul>
-            <li><svg><use href="#i-dash"/></svg>Você exporta poucas vezes por ano.</li>
-            <li><svg><use href="#i-dash"/></svg>Toda a documentação já é feita por uma trading ou despachante.</li>
-          </ul></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="ice" id="oferta">
-    <div class="wrap">
-      <div class="sec-head"><p class="kicker">Como contratar</p><h2>Implantação com a sua base, não do zero</h2></div>
-      <div class="offer">
-        <div>
-          <h3>O que está incluído</h3>
+        <div class="markets">
+          <p class="markets__label">Um modelo, vários mercados</p>
           <ul>
-            <li><svg><use href="#i-check"/></svg>Proforma, Commercial Invoice e Packing List em PDF e Excel, com a sua marca.</li>
-            <li><svg><use href="#i-check"/></svg>Formação de preço por Incoterm.</li>
-            <li><svg><use href="#i-check"/></svg>Importação de pedidos do cliente (PDF, Excel e Word).</li>
-            <li><svg><use href="#i-check"/></svg>Cadastro de clientes por país, catálogo traduzido e base de embalagens.</li>
-            <li><svg><use href="#i-check"/></svg>Versão online com acesso para a equipe.</li>
-            <li><svg><use href="#i-check"/></svg>Carga inicial dos seus clientes, produtos e tabela de preços.</li>
-            <li><svg><use href="#i-check"/></svg>Treinamento do time e suporte na implantação.</li>
+            <li class="origin">Brasil <small>Origem</small></li>
+            <li>Argentina <small>CUIT</small></li>
+            <li>Chile <small>RUT</small></li>
+            <li>Colômbia <small>NIT</small></li>
+            <li>Peru <small>RUC</small></li>
+            <li>México <small>RFC</small></li>
+            <li>Estados Unidos <small>EIN</small></li>
           </ul>
         </div>
-        <div>
-          <span class="kicker">Investimento</span>
-          <p class="price">Sob consulta</p>
-          <ol>
-            <li>Demonstração com os seus documentos.</li>
-            <li>Carga da sua base de clientes e produtos.</li>
-            <li>Primeiro embarque já no sistema.</li>
-          </ol>
-          <a class="btn btn-cta" href="#contato">Falar com um especialista</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--paper" aria-labelledby="quem-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Para quem é</p>
+        <h2 id="quem-title">Para indústrias que exportam e para quem quer começar</h2>
+        <p class="lead">Atendemos empresas brasileiras que vendem ou querem vender para a América Latina e os Estados Unidos.</p>
+      </div>
+      <div class="audience">
+        <article>
+          <p class="tag">Já exporta</p>
+          <h3>Sua equipe perde horas com planilhas</h3>
+          <ul>
+            <li>Proforma, invoice e packing list montados à mão, pedido a pedido.</li>
+            <li>Peso e cubagem conferidos na calculadora.</li>
+            <li>Cada vendedor calcula o preço de um jeito.</li>
+          </ul>
+        </article>
+        <article>
+          <p class="tag">Quer começar a exportar</p>
+          <h3>Sua empresa precisa de um caminho claro</h3>
+          <ul>
+            <li>Entender que preço cobrar em FCA, FOB ou DDP.</li>
+            <li>Saber quais documentos o importador vai pedir.</li>
+            <li>Ter orientação de quem já fez esse caminho.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="dores-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">O que o software resolve</p>
+        <h2 id="dores-title">Os problemas mais comuns de quem exporta</h2>
+      </div>
+      <div class="pains">
+        <article>
+          <h3>Documentos no Excel</h3>
+          <p class="before">Proforma copiada do último pedido, com risco de levar o cliente ou o preço errado.</p>
+          <p class="after"><b>Com o Export Link Docs:</b> numeração automática e dados puxados dos cadastros.</p>
+        </article>
+        <article>
+          <h3>Erros de peso e volume</h3>
+          <p class="before">Peso líquido, peso bruto e m³ que não batem entre a invoice e o packing list.</p>
+          <p class="after"><b>Com o Export Link Docs:</b> cálculo pela base de embalagens de cada produto.</p>
+        </article>
+        <article>
+          <h3>Preço sem método</h3>
+          <p class="before">Preço de exportação feito a partir do preço interno, com tributos que não incidem.</p>
+          <p class="after"><b>Com o Export Link Docs:</b> formação de preço por regime tributário, modal e Incoterm.</p>
+        </article>
+        <article>
+          <h3>ERP caro demais</h3>
+          <p class="before">O módulo de exportação do ERP custa mais do que a operação comporta.</p>
+          <p class="after"><b>Com o Export Link Docs:</b> um software dedicado, do tamanho da sua operação.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band--paper" aria-labelledby="modulos-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Módulos da versão 1.0</p>
+        <h2 id="modulos-title">Do cadastro do cliente ao preço por Incoterm</h2>
+      </div>
+      <div class="modules">
+        <article class="module">
+          <p class="module__k">Cadastros</p>
+          <h3>Clientes, produtos e tabelas de preço</h3>
+          <ul>
+            <li>Validação do documento fiscal do importador: <code>CUIT</code>, <code>RUT</code>, <code>NIT</code>, <code>RUC</code>, <code>RFC</code>, <code>EIN</code> e outros.</li>
+            <li>Produtos com NCM e foto.</li>
+          </ul>
+        </article>
+        <article class="module">
+          <p class="module__k">Documentos</p>
+          <h3>Proforma, commercial invoice e packing list</h3>
+          <ul>
+            <li>Saída em PDF e Excel.</li>
+            <li>Importa o pedido do cliente a partir de Excel, Word ou texto colado.</li>
+          </ul>
+        </article>
+        <article class="module">
+          <p class="module__k">Formação de preço</p>
+          <h3>Preço de exportação por modal e Incoterm</h3>
+          <ul>
+            <li>Rodoviário, marítimo e venda DDP para os Estados Unidos.</li>
+            <li>Simples, Presumido ou Real, já preparado para CBS/IBS a partir de 2027.</li>
+          </ul>
+        </article>
+      </div>
+      <p class="next-modules"><strong>Próximos módulos:</strong> <span>gestão de embarques</span> <span>gestão de clientes</span> <span>financeiro</span> <span>cotações de frete com agente de IA</span></p>
+      <div class="modules-cta"><a class="btn btn--ghost" href="software/">Ver todos os detalhes do software</a></div>
+    </div>
+  </section>
+
+  <section class="band band--navy" aria-labelledby="isnot-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Posicionamento</p>
+        <h2 id="isnot-title">O que a Export Link é e o que não é</h2>
+        <p>Damos à sua empresa as ferramentas e a orientação para ela mesma exportar.</p>
+      </div>
+      <div class="isnot">
+        <div class="isnot__col isnot__col--is">
+          <h3>A Export Link é</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Fornecedora do software Export Link Docs.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Suporte para montar a exportação dentro da sua empresa.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Orientação sobre regulamentação aduaneira e conformidade.</li>
+          </ul>
+        </div>
+        <div class="isnot__col isnot__col--not">
+          <h3>A Export Link não é</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Representante comercial: não vendemos em nome da sua empresa.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Despachante aduaneiro: não fazemos o despacho.</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Empresa de logística: não transportamos cargas.</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="faq" id="faq">
-    <div class="wrap narrow">
-      <div class="sec-head"><p class="kicker">Perguntas frequentes</p><h2>Antes de decidir</h2></div>
-      <details><summary>Preciso trocar meu ERP?</summary><p>Não. O Export Link Pro cuida dos documentos de exportação e trabalha ao lado do seu ERP. Clientes, produtos e preços podem ser carregados a partir das planilhas que você já usa.</p></details>
-      <details><summary>Os documentos saem com o layout da minha empresa?</summary><p>Sim. Logo, dados do exportador e dados bancários são configurados uma vez e saem em todos os documentos, em PDF e Excel no formato A4.</p></details>
-      <details><summary>Em que idioma os documentos saem?</summary><p>Os documentos saem em espanhol, com as descrições dos produtos traduzidas automaticamente e revisáveis antes de gerar.</p></details>
-      <details><summary>Quanto tempo leva a implantação?</summary><p>Depende do tamanho da sua base. A carga de clientes, produtos e tabela de preços é feita junto com você a partir dos seus arquivos.</p></details>
-      <details><summary>Meus dados ficam seguros?</summary><p>A versão online exige login e só usuários autorizados pela sua empresa acessam a base. Os arquivos ficam em armazenamento privado.</p></details>
-      <details><summary>Posso testar antes?</summary><p>Sim. Na demonstração montamos uma proforma real com os seus produtos para você ver o resultado.</p></details>
-    </div>
-  </section>
 
-  <section class="final" id="contato">
+  <section class="band final" aria-labelledby="final-title">
     <div class="wrap">
-      <div>
-        <p class="kicker" style="color:var(--green-on-navy)">Demonstração gratuita</p>
-        <h2 style="margin-top:12px">Seu próximo embarque pode sair sem retrabalho</h2>
-        <p>Em 30 minutos mostramos o fluxo completo com os seus produtos: do pedido do cliente ao packing list.</p>
-        <p class="contato-direto">Prefere falar direto? <a href="mailto:comercial@exportlink.com.br">comercial@exportlink.com.br</a> · <a href="https://wa.me/5541992640066" target="_blank" rel="noopener">WhatsApp +55 41 99264-0066</a></p>
+      <div class="final__text">
+        <h2 id="final-title">Veja o Export Link Docs com os seus próprios produtos</h2>
+        <p class="lead">Marque uma demonstração. Montamos uma proforma de exemplo com um item do seu catálogo.</p>
       </div>
-      <form id="demo-form" novalidate>
-        <label for="demo-nome">Nome</label>
-        <input id="demo-nome" name="nome" autocomplete="name" placeholder="Seu nome">
-        <label for="demo-empresa">Empresa</label>
-        <input id="demo-empresa" name="empresa" autocomplete="organization" placeholder="Empresa exportadora">
-        <label for="demo-email">E-mail corporativo</label>
-        <input id="demo-email" name="email" type="email" autocomplete="email" placeholder="voce@empresa.com.br">
-        <label for="demo-tel">WhatsApp</label>
-        <input id="demo-tel" name="whatsapp" type="tel" autocomplete="tel" placeholder="(00) 00000-0000">
-        <button class="btn btn-cta" type="submit">Agendar minha demonstração</button>
-        <p class="ok" id="demo-ok" role="status" hidden>Abrimos o WhatsApp com a sua mensagem pronta. É só enviar.</p>
-      </form>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="contato/?interesse=software">Solicitar demonstração</a>
+        <a class="btn btn--ghost" href="contato/">Outros contatos</a>
+      </div>
     </div>
   </section>
 </main>
 
-<footer>
+<footer class="site-footer">
   <div class="wrap">
-    <span>Export Link Pro · documentos de exportação sem retrabalho</span>
-    <span><a href="mailto:comercial@exportlink.com.br">comercial@exportlink.com.br</a> · +55 41 99264-0066</span>
-    <span>Proforma · Invoice · Packing List · Formação de preço</span>
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="./"><span class="brand__name">Export Link</span><span class="brand__sub">Global Solutions</span></a>
+        <p class="footer-tagline">Suporte à exportação para empresas brasileiras.</p>
+        <div class="social">
+          <a data-social="linkedin" href="#" hidden target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+          <a data-social="instagram" href="#" hidden target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h2>Páginas</h2>
+        <ul>
+          <li><a href="./">Início</a></li>
+          <li><a href="software/">Software</a></li>
+          <li><a href="consultoria/">Como trabalhamos</a></li>
+          <li><a href="sobre/">Sobre</a></li>
+          <li><a href="contato/">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contato</h2>
+        <ul>
+          <li>WhatsApp: +55 41 99264-0066</li>
+          <li>comercial@exportlink.com.br</li>
+          <li>Rua Gil Stein, 258 · Itajaí · SC</li>
+          <li>Segunda a sexta, das 9h às 18h</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Idioma</h2>
+        <div class="lang"><span aria-current="true" lang="pt-BR">PT</span><span class="sep">|</span><a href="es/" lang="es" hreflang="es">ES</a><span class="sep">|</span><a href="en/" lang="en" hreflang="en">EN</a></div>
+        <ul class="footer-legal-links">
+          <li><a href="termos/">Termos de Uso</a></li>
+          <li><a href="privacidade/">Política de Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>© 2026 Export Link Global Solutions</span>
+      <span>A Export Link não é despachante, nem transportadora, nem representante comercial.</span>
+    </div>
   </div>
 </footer>
 
-<script>
-/* Contato da demonstração: troque pelo número do WhatsApp comercial (só dígitos, com 55 + DDD). */
-var WHATSAPP = '5541992640066';
-document.getElementById('demo-form').addEventListener('submit', function (e) {
-  e.preventDefault();
-  var v = function (id) { return document.getElementById(id).value.trim(); };
-  var msg = 'Olá! Quero agendar uma demonstração do Export Link Pro.\n' +
-    'Nome: ' + v('demo-nome') + '\nEmpresa: ' + v('demo-empresa') +
-    '\nE-mail: ' + v('demo-email') + '\nWhatsApp: ' + v('demo-tel');
-  window.open('https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
-  document.getElementById('demo-ok').hidden = false;
-});
+<a class="wa-float" data-wa="Olá! Vim pelo site da Export Link." href="https://wa.me/5541992640066" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
 
-/* calculadora de economia */
-(function () {
-  var $ = function (id) { return document.getElementById(id); };
-  var fmt = new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 });
-  function calc() {
-    var emb = +$('roi-emb').value, min = +$('roi-min').value, custo = +$('roi-custo').value;
-    $('o-emb').value = emb; $('o-min').value = min; $('o-custo').value = custo;
-    var hoje = emb * 3 * min / 60;
-    var pro = emb * (min + 10) / 60;
-    var econ = Math.max(0, hoje - pro);
-    $('r-hoje').textContent = fmt.format(hoje) + ' h/mês';
-    $('r-pro').textContent = fmt.format(pro) + ' h/mês';
-    $('r-horas').textContent = fmt.format(econ) + ' h';
-    $('r-valor').textContent = 'R$ ' + fmt.format(econ * custo * 12);
-    $('b-hoje').style.width = '100%';
-    $('b-pro').style.width = (hoje ? pro / hoje * 100 : 0) + '%';
-  }
-  ['roi-emb', 'roi-min', 'roi-custo'].forEach(function (id) { $(id).addEventListener('input', calc); });
-  calc();
-})();
-
-/* mapa de rotas: projeção equiretangular recortada nas Américas */
-(function () {
-  var svg = document.getElementById('map'), NS = 'http://www.w3.org/2000/svg';
-  var W = 600, H = 420, lon0 = -125, lon1 = -25, lat0 = 40, lat1 = -50;
-  function px(lon, lat) { return [(lon - lon0) / (lon1 - lon0) * W, (lat0 - lat) / (lat0 - lat1) * H]; }
-  function el(tag, attrs) { var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); svg.appendChild(e); return e; }
-  for (var x = 15; x < W; x += 20) for (var y = 15; y < H; y += 20) el('circle', { cx: x, cy: y, r: 1.1, fill: '#24476A' });
-  var origem = { n: 'Itajaí', lon: -48.66, lat: -26.9 };
-  var portos = [
-    { n: 'Buenos Aires', lon: -58.4, lat: -34.6, dx: 0, dy: 22, a: 'middle' },
-    { n: 'San Antonio', lon: -71.6, lat: -33.6, dx: -8, a: 'end' },
-    { n: 'Callao', lon: -77.1, lat: -12.05, dx: -8, a: 'end' },
-    { n: 'Cartagena', lon: -75.5, lat: 10.4, dx: 8, a: 'start' },
-    { n: 'Manzanillo', lon: -104.3, lat: 19.05, dx: -8, a: 'end' },
-    { n: 'Miami', lon: -80.2, lat: 25.8, dx: 8, a: 'start' }
-  ];
-  var o = px(origem.lon, origem.lat);
-  portos.forEach(function (p) {
-    var d = px(p.lon, p.lat), mx = (o[0] + d[0]) / 2, my = (o[1] + d[1]) / 2;
-    var dist = Math.hypot(d[0] - o[0], d[1] - o[1]);
-    var cx = mx + (o[1] - d[1]) / dist * dist * .25, cy = my - (o[0] - d[0]) / dist * dist * .25;
-    el('path', { d: 'M' + o + ' Q' + cx + ',' + cy + ' ' + d, fill: 'none', stroke: '#4FD69C', 'stroke-width': 1.8, 'class': 'route-path', opacity: .9 });
-    el('circle', { cx: d[0], cy: d[1], r: 4.5, fill: '#0A2540', stroke: '#4FD69C', 'stroke-width': 2 });
-    var t = el('text', { x: d[0] + p.dx, y: d[1] + (p.dy || 4), fill: '#FFFFFF', 'font-size': 12, 'font-family': 'IBM Plex Sans, sans-serif', 'text-anchor': p.a });
-    t.textContent = p.n;
-  });
-  el('circle', { cx: o[0], cy: o[1], r: 12, fill: '#00875A', opacity: .3 });
-  el('circle', { cx: o[0], cy: o[1], r: 6, fill: '#00875A', stroke: '#FFFFFF', 'stroke-width': 2 });
-  var t = el('text', { x: o[0] + 12, y: o[1] + 18, fill: '#FFFFFF', 'font-size': 13, 'font-weight': 700, 'font-family': 'Manrope, sans-serif' });
-  t.textContent = 'Itajaí, BR';
-})();
-</script>
+<script src="js/config.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>

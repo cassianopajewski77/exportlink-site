@@ -1,9 +1,12 @@
 # exportlink-site
 
-Landing page do Export Link Pro, publicada em https://exportlink.com.br.
+Site da Export Link (PT/ES/EN), publicado em https://www.exportlink.com.br.
 
-- `site/`: arquivos publicados (página, imagem da tela, 404, robots.txt). Não tem build.
-- `wrangler.jsonc`: Worker do Cloudflare só com arquivos estáticos (`npx wrangler deploy`).
-- `PASSO-A-PASSO.md`: como ligar o domínio, o e-mail comercial@ e o deploy.
-
-Contato da demonstração: WhatsApp e e-mail ficam no fim de `site/index.html` (constante `WHATSAPP`).
+- `site/`: arquivos publicados no Cloudflare (o `wrangler.jsonc` aponta para esta pasta).
+  - Home, Software, Como trabalhamos, Sobre, Contato, Termos e Privacidade em `/`, `/es/` e `/en/`.
+  - `site/export-link-pro/`: a landing do Export Link Pro que era a home antes (página avulsa, fora do build).
+  - `css/style.css` e `js/*.js` são editados direto aqui. `js/config.js` tem o WhatsApp e as redes sociais.
+- `src/`: partes de cada página (`pt/`, `es/`, `en/`) e `build.py`. Depois de mudar um texto, rode
+  `python3 src/build.py`: ele monta cabeçalho, rodapé e metatags em `site/` e gera `sitemap.xml` e `robots.txt`.
+- O formulário de contato abre o WhatsApp com a mensagem pronta (o Cloudflare não recebe formulários).
+- `PASSO-A-PASSO.md`: como ligar o domínio, o e-mail comercial@ e o deploy. Cada push no `main` publica o site.
