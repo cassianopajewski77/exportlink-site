@@ -13,7 +13,7 @@ OUT = os.path.join(HERE, "..", "site")
 BASE = "https://www.exportlink.com.br/"
 
 # slug "" é a página inicial
-PAGES = ["", "software", "docs", "consultoria", "sobre", "contato", "termos", "privacidade"]
+PAGES = ["", "sobre", "consultoria", "software", "docs", "treinamentos", "contato", "termos", "privacidade"]
 # páginas que pertencem a outra no menu (fica destacado o item do pai)
 NAV_PARENT = {"docs": "software"}
 # CSS extra de algumas páginas
@@ -32,7 +32,8 @@ T = {
     "pt": {
         "skip": "Pular para o conteúdo",
         "home_label": "Export Link Global Solutions, página inicial",
-        "nav": {"": "Início", "software": "Software", "consultoria": "Como trabalhamos", "sobre": "Sobre", "contato": "Contato"},
+        "nav": {"sobre": "Sobre nós", "consultoria": "Serviços", "software": "Produtos", "treinamentos": "Treinamentos"},
+        "foot": {"": "Início", "contato": "Contato"},
         "nav_label": "Principal",
         "lang_label": "Idioma",
         "demo": "Agendar uma conversa",
@@ -52,6 +53,8 @@ T = {
                          "Proforma, commercial invoice e packing list em PDF e Excel, cadastros com validação fiscal das Américas e formação de preço por Incoterm, inclusive DDP para os EUA."),
             "docs": ("Export Link Docs | Proforma, invoice e packing list para exportação",
                      "Export Link Docs, módulo do software Export Link: digite o pedido uma vez e receba proforma, commercial invoice e packing list em PDF e Excel."),
+            "treinamentos": ("Treinamentos em exportação | Export Link",
+                             "Treinamentos da Export Link para a sua equipe: o método de exportação da empresa, documentos, preço por Incoterm e o uso do software Export Link."),
             "consultoria": ("Como trabalhamos | Ecossistema de exportação | Export Link",
                             "A Export Link monta o ecossistema de exportação dentro da sua empresa, com um modelo de negócio replicável em vários países. Comece pela pesquisa de mercado orientativa ou pela análise prévia de exportação."),
             "sobre": ("Sobre a Export Link e o fundador Cassiano Pajewski",
@@ -69,7 +72,8 @@ T = {
 T["es"] = {
     "skip": "Saltar al contenido",
     "home_label": "Export Link Global Solutions, página de inicio",
-    "nav": {"": "Inicio", "software": "Software", "consultoria": "Cómo trabajamos", "sobre": "Nosotros", "contato": "Contacto"},
+    "nav": {"sobre": "Nosotros", "consultoria": "Servicios", "software": "Productos", "treinamentos": "Capacitaciones"},
+    "foot": {"": "Inicio", "contato": "Contacto"},
     "nav_label": "Principal",
     "lang_label": "Idioma",
     "demo": "Agendar una conversación",
@@ -87,6 +91,8 @@ T["es"] = {
              "Export Link monta dentro de su empresa un ecosistema de exportación: método, documentos, precio por Incoterm y un modelo de negocio replicable en varios países."),
         "software": ("Software Export Link | Documentos y precio de exportación",
                      "Proforma, commercial invoice y packing list en PDF y Excel, registros con validación fiscal de las Américas y formación de precio por Incoterm, incluso DDP a EE. UU."),
+        "treinamentos": ("Capacitaciones en exportación | Export Link",
+                         "Capacitaciones de Export Link para su equipo: el método de exportación de la empresa, documentos, precio por Incoterm y el uso del software Export Link."),
         "consultoria": ("Cómo trabajamos | Ecosistema de exportación | Export Link",
                         "Export Link monta el ecosistema de exportación dentro de su empresa, con un modelo de negocio replicable en varios países. Empiece por la investigación de mercado orientativa o por el análisis previo de exportación."),
         "sobre": ("Sobre Export Link y su fundador, Cassiano Pajewski",
@@ -103,7 +109,8 @@ T["es"] = {
 T["en"] = {
     "skip": "Skip to content",
     "home_label": "Export Link Global Solutions, home page",
-    "nav": {"": "Home", "software": "Software", "consultoria": "How we work", "sobre": "About", "contato": "Contact"},
+    "nav": {"sobre": "About us", "consultoria": "Services", "software": "Products", "treinamentos": "Training"},
+    "foot": {"": "Home", "contato": "Contact"},
     "nav_label": "Main",
     "lang_label": "Language",
     "demo": "Book a call",
@@ -121,6 +128,8 @@ T["en"] = {
              "Export Link builds an export ecosystem inside your company: method, documents, pricing by Incoterm and a business model you can replicate in many countries."),
         "software": ("Export Link software | Export documents and pricing",
                      "Pro forma, commercial invoice and packing list in PDF and Excel, tax ID validation across the Americas and export pricing by Incoterm, including DDP to the US."),
+        "treinamentos": ("Export training | Export Link",
+                         "Export Link training for your team: your company's export method, documents, Incoterm pricing and how to use the Export Link software."),
         "consultoria": ("How we work | Export ecosystem | Export Link",
                         "Export Link builds the export ecosystem inside your company, with a business model you can replicate in many countries. Start with a market research report or an export pre-assessment."),
         "sobre": ("About Export Link and founder Cassiano Pajewski",
@@ -209,7 +218,8 @@ def page(lang, slug, body):
         return f'<a href="{rel(here, url_of(lang, s))}"{cur}>{t["nav"][s]}</a>'
 
     nav = "\n      ".join(nav_link(s) for s in t["nav"])
-    foot_pages = "\n          ".join(f'<li><a href="{rel(here, url_of(lang, s))}">{t["nav"][s]}</a></li>' for s in t["nav"])
+    foot_links = {"": t["foot"][""], **t["nav"], "contato": t["foot"]["contato"]}
+    foot_pages = "\n          ".join(f'<li><a href="{rel(here, url_of(lang, s))}">{label}</a></li>' for s, label in foot_links.items())
     demo_href = rel(here, url_of(lang, "contato")) + "?interesse=consultoria"
     home = rel(here, url_of(lang, ""))
     extra_css = f'\n<link rel="stylesheet" href="{P}{EXTRA_CSS[slug]}">' if slug in EXTRA_CSS else ""

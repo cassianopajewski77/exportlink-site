@@ -7,7 +7,7 @@
   var toggle = document.querySelector(".menu-toggle");
   var nav = document.getElementById("site-nav");
   if (toggle && nav) {
-    var mq = window.matchMedia("(max-width: 1120px)");
+    var mq = window.matchMedia("(max-width: 760px)");
     var sync = function () { nav.hidden = mq.matches; toggle.setAttribute("aria-expanded", "false"); };
     sync();
     if (mq.addEventListener) mq.addEventListener("change", sync);

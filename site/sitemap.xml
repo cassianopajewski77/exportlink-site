@@ -9,6 +9,22 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.exportlink.com.br/sobre/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/sobre/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/consultoria/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/consultoria/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/consultoria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/consultoria/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/consultoria/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.exportlink.com.br/software/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/software/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/software/"/>
@@ -23,19 +39,11 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.exportlink.com.br/consultoria/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/consultoria/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/consultoria/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/consultoria/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/consultoria/"/>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.exportlink.com.br/sobre/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/sobre/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/sobre/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/sobre/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/sobre/"/>
+    <loc>https://www.exportlink.com.br/treinamentos/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/treinamentos/"/>
     <priority>0.8</priority>
   </url>
   <url>
@@ -71,11 +79,11 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.exportlink.com.br/es/software/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/software/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/software/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/software/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/software/"/>
+    <loc>https://www.exportlink.com.br/es/sobre/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/sobre/"/>
     <priority>0.8</priority>
   </url>
   <url>
@@ -87,11 +95,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.exportlink.com.br/es/sobre/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/sobre/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/sobre/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/sobre/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/sobre/"/>
+    <loc>https://www.exportlink.com.br/es/software/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/software/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/software/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/software/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/software/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/es/treinamentos/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/treinamentos/"/>
     <priority>0.8</priority>
   </url>
   <url>
@@ -127,11 +143,11 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.exportlink.com.br/en/software/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/software/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/software/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/software/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/software/"/>
+    <loc>https://www.exportlink.com.br/en/sobre/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/sobre/"/>
     <priority>0.8</priority>
   </url>
   <url>
@@ -143,11 +159,19 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.exportlink.com.br/en/sobre/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/sobre/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/sobre/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/sobre/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/sobre/"/>
+    <loc>https://www.exportlink.com.br/en/software/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/software/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/software/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/software/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/software/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/en/treinamentos/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/treinamentos/"/>
     <priority>0.8</priority>
   </url>
   <url>
