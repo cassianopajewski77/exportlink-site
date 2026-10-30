@@ -1,7 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.exportlink.com.br/</loc>
     <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/es/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/en/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/sobre/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/sobre/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/es/sobre/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/sobre/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/en/sobre/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/sobre/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/sobre/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/consultoria/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/consultoria/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/consultoria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/consultoria/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/es/consultoria/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/consultoria/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/consultoria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/consultoria/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/en/consultoria/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/consultoria/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/consultoria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/consultoria/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/software/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/software/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/software/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/software/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/es/software/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/software/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/software/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/software/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/en/software/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/software/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/software/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/software/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/docs/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/treinamentos/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/treinamentos/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/es/treinamentos/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/treinamentos/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/en/treinamentos/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/treinamentos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/treinamentos/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/contato/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/contato/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/contato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/contato/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/es/contato/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/contato/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/contato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/contato/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/en/contato/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/contato/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/contato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/contato/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/termos/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/termos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/termos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/termos/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/es/termos/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/termos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/termos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/termos/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/en/termos/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/termos/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/termos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/termos/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/privacidade/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/privacidade/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/es/privacidade/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/privacidade/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/en/privacidade/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/privacidade/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/privacidade/"/>
   </url>
 </urlset>
