@@ -126,6 +126,23 @@
     start();
   }
 
+  // Índice da página: marca a seção que está na tela
+  var idx = document.querySelector(".page-index");
+  if (idx && "IntersectionObserver" in window) {
+    var links = idx.querySelectorAll("a[href^='#']");
+    var mark = function (id) {
+      links.forEach(function (a) {
+        var on = a.getAttribute("href") === "#" + id;
+        if (on) { a.setAttribute("aria-current", "true"); a.scrollIntoView({ block: "nearest", inline: "nearest" }); }
+        else a.removeAttribute("aria-current");
+      });
+    };
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) mark(e.target.id); });
+    }, { rootMargin: "-140px 0px -60% 0px" });
+    links.forEach(function (a) { var t = document.getElementById(a.getAttribute("href").slice(1)); if (t) io.observe(t); });
+  }
+
   // Ano no rodapé
   document.querySelectorAll("[data-year]").forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
