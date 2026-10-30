@@ -17,6 +17,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.exportlink.com.br/docs/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/docs/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/docs/"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.exportlink.com.br/consultoria/</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/consultoria/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/consultoria/"/>
@@ -167,9 +173,5 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/privacidade/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/privacidade/"/>
     <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.exportlink.com.br/docs/</loc>
-    <priority>0.8</priority>
   </url>
 </urlset>

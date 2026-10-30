@@ -13,7 +13,15 @@ OUT = os.path.join(HERE, "..", "site")
 BASE = "https://www.exportlink.com.br/"
 
 # slug "" é a página inicial
-PAGES = ["", "software", "consultoria", "sobre", "contato", "termos", "privacidade"]
+PAGES = ["", "software", "docs", "consultoria", "sobre", "contato", "termos", "privacidade"]
+# páginas que pertencem a outra no menu (fica destacado o item do pai)
+NAV_PARENT = {"docs": "software"}
+# CSS extra de algumas páginas
+EXTRA_CSS = {"docs": "css/docs.css"}
+
+
+def has_page(lang, slug):
+    return os.path.exists(os.path.join(HERE, lang, (slug or "index") + ".html"))
 LANGS = {
     "pt": {"dir": "", "html": "pt-BR", "og": "pt_BR"},
     "es": {"dir": "es/", "html": "es", "og": "es_LA"},
@@ -42,6 +50,8 @@ T = {
                  "A Export Link monta dentro da sua empresa um ecossistema de exportação: método, documentos, preço por Incoterm e um modelo de negócio replicável em vários países."),
             "software": ("Software Export Link | Documentos e preço de exportação",
                          "Proforma, commercial invoice e packing list em PDF e Excel, cadastros com validação fiscal das Américas e formação de preço por Incoterm, inclusive DDP para os EUA."),
+            "docs": ("Export Link Docs | Proforma, invoice e packing list para exportação",
+                     "Export Link Docs, módulo do software Export Link: digite o pedido uma vez e receba proforma, commercial invoice e packing list em PDF e Excel."),
             "consultoria": ("Como trabalhamos | Ecossistema de exportação | Export Link",
                             "A Export Link monta o ecossistema de exportação dentro da sua empresa, com um modelo de negócio replicável em vários países. Comece pela pesquisa de mercado orientativa ou pela análise prévia de exportação."),
             "sobre": ("Sobre a Export Link e o fundador Cassiano Pajewski",
@@ -142,10 +152,11 @@ def lang_switch(lang, slug, here):
     parts = []
     for code in ("pt", "es", "en"):
         label = code.upper()
+        target = slug if has_page(code, slug) else "software"
         if code == lang:
             parts.append(f'<span aria-current="true" lang="{LANGS[code]["html"]}">{label}</span>')
         else:
-            parts.append(f'<a href="{rel(here, url_of(code, slug))}" lang="{LANGS[code]["html"]}" hreflang="{LANGS[code]["html"]}">{label}</a>')
+            parts.append(f'<a href="{rel(here, url_of(code, target))}" lang="{LANGS[code]["html"]}" hreflang="{LANGS[code]["html"]}">{label}</a>')
     return '<span class="sep">|</span>'.join(parts)
 
 
@@ -189,18 +200,19 @@ def page(lang, slug, body):
     title, desc = t["pages"][slug]
     canonical = BASE + here
     alts = "\n".join(
-        f'<link rel="alternate" hreflang="{LANGS[c]["html"]}" href="{BASE + url_of(c, slug)}">' for c in LANGS
+        f'<link rel="alternate" hreflang="{LANGS[c]["html"]}" href="{BASE + url_of(c, slug)}">' for c in LANGS if has_page(c, slug)
     ) + f'\n<link rel="alternate" hreflang="x-default" href="{BASE + url_of("pt", slug)}">'
-    og_alt = "\n".join(f'<meta property="og:locale:alternate" content="{LANGS[c]["og"]}">' for c in LANGS if c != lang)
+    og_alt = "\n".join(f'<meta property="og:locale:alternate" content="{LANGS[c]["og"]}">' for c in LANGS if c != lang and has_page(c, slug))
 
     def nav_link(s):
-        cur = ' aria-current="page"' if s == slug else ""
+        cur = ' aria-current="page"' if s == NAV_PARENT.get(slug, slug) else ""
         return f'<a href="{rel(here, url_of(lang, s))}"{cur}>{t["nav"][s]}</a>'
 
     nav = "\n      ".join(nav_link(s) for s in t["nav"])
     foot_pages = "\n          ".join(f'<li><a href="{rel(here, url_of(lang, s))}">{t["nav"][s]}</a></li>' for s in t["nav"])
     demo_href = rel(here, url_of(lang, "contato")) + "?interesse=consultoria"
     home = rel(here, url_of(lang, ""))
+    extra_css = f'\n<link rel="stylesheet" href="{P}{EXTRA_CSS[slug]}">' if slug in EXTRA_CSS else ""
     body = body.replace("{P}", P).replace("{L}", rel(here, L["dir"]) if L["dir"] else P)
 
     return f"""<!doctype html>
@@ -226,7 +238,7 @@ def page(lang, slug, body):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="{P}css/style.css">
+<link rel="stylesheet" href="{P}css/style.css">{extra_css}
 <script type="application/ld+json">
 {jsonld(lang)}
 </script>
@@ -332,13 +344,13 @@ def write_sitemap():
     rows = []
     for lang in T:
         for slug in PAGES:
+            if not has_page(lang, slug):
+                continue
             alts = "".join(
-                f'\n    <xhtml:link rel="alternate" hreflang="{LANGS[c]["html"]}" href="{BASE + url_of(c, slug)}"/>' for c in T
+                f'\n    <xhtml:link rel="alternate" hreflang="{LANGS[c]["html"]}" href="{BASE + url_of(c, slug)}"/>' for c in T if has_page(c, slug)
             ) + f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{BASE + url_of("pt", slug)}"/>'
             prio = "1.0" if slug == "" else ("0.3" if slug in ("termos", "privacidade") else "0.8")
             rows.append(f"  <url>\n    <loc>{BASE + url_of(lang, slug)}</loc>{alts}\n    <priority>{prio}</priority>\n  </url>")
-    # Landing do módulo Export Link Docs (página avulsa, fora do build)
-    rows.append(f"  <url>\n    <loc>{BASE}docs/</loc>\n    <priority>0.8</priority>\n  </url>")
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
            + "\n".join(rows) + "\n</urlset>\n")

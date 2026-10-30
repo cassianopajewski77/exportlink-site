@@ -3,265 +3,94 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 30 30%27%3E%3Crect width=%2730%27 height=%2730%27 rx=%277%27 fill=%27%2300875A%27/%3E%3Cpath d=%27M8 19l5-8 4 5 5-7%27 fill=%27none%27 stroke=%27white%27 stroke-width=%272.6%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E">
-<meta property="og:title" content="Export Link Docs">
-<meta property="og:description" content="Proforma, commercial invoice e packing list a partir de uma única digitação.">
-<meta property="og:image" content="https://www.exportlink.com.br/docs/tela-export-link.jpg">
-<meta property="og:url" content="https://www.exportlink.com.br/docs/">
-<meta property="og:locale" content="pt_BR">
-<meta property="og:site_name" content="Export Link Docs">
-<link rel="canonical" href="https://www.exportlink.com.br/docs/">
+<title>Export Link Docs | Proforma, invoice e packing list para exportação</title>
+<meta name="description" content="Export Link Docs, módulo do software Export Link: digite o pedido uma vez e receba proforma, commercial invoice e packing list em PDF e Excel.">
 <meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.exportlink.com.br/docs/">
+<link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/docs/">
+<link rel="alternate" hreflang="x-default" href="https://www.exportlink.com.br/docs/">
 <meta property="og:type" content="website">
-<title>Export Link Docs | Proforma, Invoice e Packing List para exportação</title>
-<meta name="description" content="Export Link Docs: proforma, commercial invoice e packing list a partir de uma única digitação. Software B2B para departamentos de exportação.">
+<meta property="og:site_name" content="Export Link Global Solutions">
+<meta property="og:title" content="Export Link Docs | Proforma, invoice e packing list para exportação">
+<meta property="og:description" content="Export Link Docs, módulo do software Export Link: digite o pedido uma vez e receba proforma, commercial invoice e packing list em PDF e Excel.">
+<meta property="og:url" content="https://www.exportlink.com.br/docs/">
+<meta property="og:image" content="https://www.exportlink.com.br/img/og-image.jpg">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="icon" href="../favicon.ico" sizes="any">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: B2B SaaS 60-30-10. Hero navy com painel do embarque, blocos brancos/gelo, mapa de rotas, calculadora de ROI. Laranja só nos CTAs.
-   Tema único (paleta definida pelo cliente), cores todas explícitas. */
-:root{
-  --navy:#0A2540;        /* 60% dominante */
-  --navy-2:#12324F;
-  --navy-line:#24476A;
-  --green:#00875A;       /* 30% secundária */
-  --green-soft:#E3F4EC;
-  --green-on-navy:#4FD69C;
-  --orange:#FF6B00;      /* 10% só CTA */
-  --orange-hover:#E85F00;
-  --white:#FFFFFF;
-  --ice:#F4F6F8;
-  --line:#DDE3EA;
-  --text:#0A2540;
-  --muted:#4A5D72;
-  --on-navy:#FFFFFF;
-  --on-navy-muted:#A9BBCE;
-  --display:"Manrope","Segoe UI",system-ui,sans-serif;
-  --body:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:var(--white);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6;margin:0}
-a{color:var(--green)}
-:focus-visible{outline:3px solid var(--green-on-navy);outline-offset:3px}
-.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.narrow{max-width:840px}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;color:inherit}
-h1{font-size:clamp(2.4rem,5.6vw,4.1rem);font-weight:800;line-height:1.05;letter-spacing:-.025em}
-h2{font-size:clamp(1.9rem,3.8vw,2.8rem);font-weight:800;line-height:1.12;letter-spacing:-.02em}
-h3{font-size:1.18rem;font-weight:700;line-height:1.3}
-p{margin:0}
-.kicker{font-family:var(--display);font-weight:700;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
-.lede{font-size:1.15rem;color:var(--muted);max-width:62ch}
-section{padding-block:clamp(64px,8vw,104px)}
-.ice{background:var(--ice)}
-.sec-head{display:grid;gap:14px;margin-bottom:48px;max-width:780px}
-.sec-head.center{text-align:center;justify-items:center;margin-inline:auto}
-.sec-head.center .lede{margin-inline:auto}
-
-/* CTA: único uso do laranja */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--display);font-weight:800;font-size:1rem;padding:14px 24px;border-radius:8px;text-decoration:none;cursor:pointer;border:2px solid transparent;text-align:center;transition:background .15s,transform .15s}
-.btn-cta{background:var(--orange);color:var(--navy)}
-.btn-cta:hover{background:var(--orange-hover);transform:translateY(-1px)}
-.btn-ghost{border-color:var(--navy-line);color:var(--on-navy);background:transparent}
-.btn-ghost:hover{border-color:var(--on-navy-muted)}
-.btn-sm{padding:9px 16px;font-size:.92rem}
-.cta-note{font-size:.9rem;color:var(--muted)}
-
-/* topo */
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--navy)}
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--navy);color:var(--on-navy);border-bottom:1px solid var(--navy-line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
-.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:1.2rem;color:var(--on-navy);text-decoration:none;letter-spacing:-.01em}
-.brand svg{width:30px;height:30px;flex:none}
-.top nav{display:flex;gap:26px;font-size:.95rem}
-.top nav a{color:var(--on-navy-muted);text-decoration:none}
-.top nav a:hover{color:var(--on-navy)}
-@media (max-width:820px){.top nav{display:none}}
-
-/* hero */
-.hero{background:var(--navy);color:var(--on-navy);padding-block:clamp(48px,7vw,88px) clamp(64px,8vw,104px);overflow:hidden}
-.hero .wrap{display:grid;gap:clamp(32px,5vw,64px)}
-.hero-copy{max-width:860px;margin-inline:auto;text-align:center;justify-items:center}
-.hero-copy .lede{margin-inline:auto}
-.hero-ctas,.checks{justify-content:center}
-.shot-wrap{margin-top:clamp(40px,6vw,64px)}
-.shot{margin:0;background:var(--white);border-radius:14px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 0 1px var(--navy-line)}
-.shot-bar{display:flex;align-items:center;gap:14px;padding:10px 16px;background:var(--ice);border-bottom:1px solid var(--line);font-size:.8rem;color:var(--muted)}
-.shot img{display:block;width:100%;height:auto;max-width:100%}
-.shot figcaption{font-family:var(--mono);font-size:.72rem;color:var(--muted);padding:8px 16px;background:var(--ice);border-top:1px solid var(--line)}
-.hero-copy{display:grid;gap:24px;min-width:0}
-.hero .kicker{color:var(--green-on-navy)}
-.hero .lede{color:var(--on-navy-muted)}
-.hero h1 span{color:var(--green-on-navy)}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
-.checks{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.93rem;color:var(--on-navy-muted);list-style:none;margin:0;padding:0}
-.checks li{display:flex;gap:7px;align-items:center}
-.checks svg{width:16px;height:16px;color:var(--green-on-navy);flex:none}
-@media (max-width:960px){.hero .wrap{grid-template-columns:1fr}}
-
-/* painel do embarque (widget do hero) */
-.panel{background:var(--white);color:var(--text);border-radius:14px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);overflow:hidden;min-width:0}
-.panel-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 18px;border-bottom:1px solid var(--line);font-size:.82rem}
-.panel-bar b{font-family:var(--display);font-size:.95rem}
-.dots{display:flex;gap:5px}.dots i{width:9px;height:9px;border-radius:50%;background:var(--line);display:block}
-.panel-body{padding:18px;display:grid;gap:16px}
-.route-strip{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
-.route-strip b{color:var(--text);font-weight:500}
-.route-strip .line{flex:1;height:2px;background:repeating-linear-gradient(90deg,var(--green) 0 6px,transparent 6px 11px);position:relative;min-width:30px}
-.route-strip .line::after{content:"";position:absolute;right:-2px;top:-4px;border:5px solid transparent;border-left-color:var(--green)}
-.docs-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.doc-tile{border:1px solid var(--line);border-radius:10px;padding:12px;display:grid;gap:6px;min-width:0}
-.doc-tile .t{font-family:var(--display);font-weight:700;font-size:.88rem}
-.badge{justify-self:start;font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:99px;background:var(--green-soft);color:var(--green)}
-.doc-tile .meta{font-family:var(--mono);font-size:.7rem;color:var(--muted)}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.kpis div{background:var(--ice);padding:10px 12px;min-width:0}
-.kpis span{display:block;font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
-.kpis b{font-family:var(--mono);font-weight:500;font-size:.98rem;font-variant-numeric:tabular-nums}
-.items{width:100%;border-collapse:collapse;font-size:.78rem;font-variant-numeric:tabular-nums}
-.items th{font-weight:500;text-align:left;color:var(--muted);font-size:.68rem;text-transform:uppercase;letter-spacing:.06em;padding:0 6px 6px;border-bottom:1px solid var(--line)}
-.items td{padding:7px 6px;border-bottom:1px solid var(--ice)}
-.items .n{text-align:right;white-space:nowrap}
-.items-wrap{overflow-x:auto}
-.panel-foot{display:flex;justify-content:space-between;gap:10px;font-size:.72rem;color:var(--muted);padding:10px 18px;background:var(--ice)}
-.sync{display:flex;align-items:center;gap:6px;color:var(--green);font-weight:600}
-.sync::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--green)}
-@media (max-width:520px){.docs-row{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
-
-/* faixa de documentos */
-.strip{border-bottom:1px solid var(--line)}
-.strip .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 36px;padding-block:22px;font-family:var(--display);font-weight:700;color:var(--muted);font-size:.95rem}
-.strip span:first-child{font-family:var(--body);font-weight:500;font-size:.85rem}
-
-/* dores */
-.pains{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:26px;display:grid;gap:10px;align-content:start;min-width:0}
-.card p{color:var(--muted);font-size:.98rem}
-.ico{width:44px;height:44px;border-radius:10px;background:var(--green-soft);color:var(--green);display:grid;place-items:center}
-.ico svg{width:22px;height:22px}
-@media (max-width:900px){.pains{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.pains{grid-template-columns:1fr}}
-
-/* fluxo */
-.flow{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;list-style:none;margin:0;padding:0;counter-reset:s}
-.flow li{position:relative;display:grid;gap:8px;align-content:start;padding:20px 16px;border:1px solid var(--line);border-radius:12px;background:var(--white);min-width:0}
-.flow li::before{counter-increment:s;content:"0" counter(s);font-family:var(--mono);font-size:.78rem;color:var(--green);font-weight:500}
-.flow p{font-size:.9rem;color:var(--muted)}
-.flow li:not(:last-child)::after{content:"";position:absolute;top:50%;right:-11px;width:8px;height:8px;border-top:2px solid var(--green);border-right:2px solid var(--green);transform:translateY(-50%) rotate(45deg)}
-@media (max-width:1020px){.flow{grid-template-columns:repeat(3,1fr)}.flow li::after{display:none}}
-@media (max-width:600px){.flow{grid-template-columns:1fr}}
-
-/* mapa */
-.mapsec{background:var(--navy);color:var(--on-navy)}
-.mapsec .kicker{color:var(--green-on-navy)}
-.mapsec .lede{color:var(--on-navy-muted)}
-.map-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:28px;align-items:stretch}
-.map-card{background:var(--navy-2);border:1px solid var(--navy-line);border-radius:14px;padding:16px;min-width:0}
-.map-card svg{width:100%;height:auto;display:block}
-.map-note{font-family:var(--mono);font-size:.72rem;color:var(--on-navy-muted);margin-top:8px}
-.port-list{display:grid;gap:10px;align-content:start;list-style:none;margin:0;padding:0}
-.port-list li{display:grid;grid-template-columns:1fr auto;gap:4px 10px;background:var(--navy-2);border:1px solid var(--navy-line);border-radius:10px;padding:12px 14px}
-.port-list b{font-family:var(--display);font-weight:700;font-size:.95rem}
-.port-list span{font-family:var(--mono);font-size:.72rem;color:var(--on-navy-muted)}
-.port-list em{grid-column:1 / -1;font-style:normal;font-size:.82rem;color:var(--green-on-navy)}
-@media (max-width:900px){.map-grid{grid-template-columns:1fr}.port-list{grid-template-columns:1fr 1fr}}
-@media (max-width:520px){.port-list{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:no-preference){.route-path{stroke-dasharray:5 6;animation:flow 1.6s linear infinite}@keyframes flow{to{stroke-dashoffset:-22}}}
-
-/* recursos */
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media (max-width:900px){.features{grid-template-columns:1fr 1fr}}
-@media (max-width:600px){.features{grid-template-columns:1fr}}
-.mid-cta{margin-top:40px;display:flex;flex-wrap:wrap;gap:14px 20px;align-items:center}
-
-/* ROI */
-.roi{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
-.roi-form{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;gap:18px;min-width:0}
-.field{display:grid;gap:6px}
-.field label{font-weight:600;font-size:.93rem}
-.field .row{display:flex;align-items:center;gap:12px}
-.field input[type=range]{flex:1;accent-color:var(--green);min-width:0}
-.field output{font-family:var(--mono);font-size:.95rem;min-width:4.5ch;text-align:right;font-variant-numeric:tabular-nums}
-.assume{font-size:.82rem;color:var(--muted);border-top:1px solid var(--line);padding-top:14px}
-.roi-out{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:26px;display:grid;gap:22px;min-width:0}
-.big{display:flex;flex-wrap:wrap;gap:8px 28px}
-.big div{display:grid}
-.big b{font-family:var(--display);font-size:clamp(2rem,4vw,2.8rem);font-weight:800;color:var(--green);line-height:1.1;font-variant-numeric:tabular-nums}
-.big span{font-size:.88rem;color:var(--muted)}
-.bars{display:grid;gap:14px}
-.bar{display:grid;gap:6px}
-.bar-head{display:flex;justify-content:space-between;font-size:.88rem}
-.bar-head b{font-family:var(--mono);font-weight:500;font-variant-numeric:tabular-nums}
-.track{height:14px;background:var(--ice);border-radius:99px;overflow:hidden}
-.fill{height:100%;border-radius:99px;transition:width .3s}
-.fill.now{background:var(--navy)}
-.fill.pro{background:var(--green)}
-@media (max-width:900px){.roi{grid-template-columns:1fr}}
-
-/* origem + para quem */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.split .card ul{margin:0;padding:0;list-style:none;display:grid;gap:10px}
-.split li{display:grid;grid-template-columns:20px 1fr;gap:8px}
-.split li svg{width:18px;height:18px;margin-top:4px}
-.yes svg{color:var(--green)}
-.no svg{color:var(--muted)}
-@media (max-width:760px){.split{grid-template-columns:1fr}}
-.origin{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start;border-left:4px solid var(--green);padding-left:28px;max-width:900px}
-.origin blockquote{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(1.5rem,3vw,2.1rem);line-height:1.2;letter-spacing:-.015em}
-.origin p{color:var(--muted);margin-top:12px}
-
-/* oferta */
-.offer{display:grid;grid-template-columns:1.25fr .75fr;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--white)}
-.offer > div{padding:clamp(24px,3.5vw,40px);display:grid;gap:16px;align-content:start;min-width:0}
-.offer > div+div{background:var(--navy);color:var(--on-navy)}
-.offer ul{margin:0;padding:0;list-style:none;display:grid;gap:12px}
-.offer ul li{display:grid;grid-template-columns:22px 1fr;gap:8px}
-.offer ol li{display:list-item}
-.offer li svg{width:18px;height:18px;color:var(--green);margin-top:4px}
-.price{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:1}
-.offer .kicker{color:var(--green-on-navy)}
-.offer ol{margin:0;padding-left:20px;display:grid;gap:8px;color:var(--on-navy-muted)}
-.todo{justify-self:start;font-family:var(--mono);font-size:.72rem;color:var(--on-navy-muted);border:1px dashed var(--on-navy-muted);padding:3px 8px;border-radius:4px}
-@media (max-width:820px){.offer{grid-template-columns:1fr}}
-
-/* faq */
-.faq details{border-bottom:1px solid var(--line);padding-block:18px}
-.faq summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.08rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";color:var(--green);font-size:1.3rem;line-height:1}
-.faq details[open] summary::after{content:"−"}
-.faq details p{margin-top:10px;color:var(--muted);max-width:68ch}
-
-/* cta final */
-.final{background:var(--navy);color:var(--on-navy)}
-.final .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
-.final p{color:var(--on-navy-muted);font-size:1.1rem;max-width:52ch;margin-top:16px}
-.final form{background:var(--white);color:var(--text);border-radius:14px;padding:26px;display:grid;gap:10px;min-width:0}
-.final label{font-weight:600;font-size:.9rem}
-.final input{width:100%;font:inherit;padding:11px 13px;border:1px solid var(--line);border-radius:8px;background:var(--white);color:var(--text)}
-.final input:focus{outline:2px solid var(--green);border-color:var(--green)}
-.final .btn{margin-top:8px}
-.ok{font-size:.9rem;color:var(--green);font-weight:600}
-@media (max-width:860px){.final .wrap{grid-template-columns:1fr}}
-
-.contato-direto{font-size:1rem!important}
-.contato-direto a,footer a{color:var(--green-on-navy)}
-footer{background:var(--navy);color:var(--on-navy-muted);border-top:1px solid var(--navy-line);font-size:.88rem}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:24px}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/docs.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Export Link Docs","url":"https://www.exportlink.com.br/docs/",
-"applicationCategory":"BusinessApplication","operatingSystem":"Web",
-"description":"Software para departamentos de exportação: proforma invoice, commercial invoice e packing list a partir de uma única digitação, com formação de preço por Incoterm.",
-"inLanguage":"pt-BR","offers":{"@type":"Offer","priceCurrency":"BRL","availability":"https://schema.org/InStock","description":"Sob consulta"},
-"provider":{"@type":"Organization","name":"Export Link","url":"https://www.exportlink.com.br/docs/","email":"comercial@exportlink.com.br","telephone":"+55-41-99264-0066"}}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.exportlink.com.br/#org",
+      "name": "Export Link Global Solutions",
+      "url": "https://www.exportlink.com.br/",
+      "logo": "https://www.exportlink.com.br/img/exportdocspro-simbolo.svg",
+      "email": "comercial@exportlink.com.br",
+      "telephone": "+55 41 99264-0066",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Gil Stein, 258",
+        "addressLocality": "Itajaí",
+        "addressRegion": "SC",
+        "addressCountry": "BR"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Cassiano Pajewski"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Export Link",
+      "alternateName": "Export Link Docs",
+      "applicationCategory": "BusinessApplication",
+      "inLanguage": "pt-BR",
+      "description": "Proforma, commercial invoice e packing list em PDF e Excel, cadastros com validação fiscal das Américas e formação de preço por Incoterm, inclusive DDP para os EUA.",
+      "publisher": {
+        "@id": "https://www.exportlink.com.br/#org"
+      }
+    }
+  ]
+}
 </script>
 </head>
 <body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Export Link Global Solutions, página inicial">
+      <svg class="brand__mark" viewBox="0 0 30 30" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="7" fill="#00875A"/><path d="M8 19l5-8 4 5 5-7" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span class="brand__text"><span class="brand__name">Export Link</span><span class="brand__sub">Global Solutions</span></span>
+    </a>
+    <nav id="site-nav" class="nav" aria-label="Principal">
+      <a href="../">Início</a>
+      <a href="../software/" aria-current="page">Software</a>
+      <a href="../consultoria/">Como trabalhamos</a>
+      <a href="../sobre/">Sobre</a>
+      <a href="../contato/">Contato</a>
+      <a class="btn btn--primary nav-cta-mobile" href="../contato/?interesse=consultoria">Agendar uma conversa</a>
+    </nav>
+    <div class="lang" aria-label="Idioma">
+      <span aria-current="true" lang="pt-BR">PT</span><span class="sep">|</span><a href="../es/software/" lang="es" hreflang="es">ES</a><span class="sep">|</span><a href="../en/software/" lang="en" hreflang="en">EN</a>
+    </div>
+    <a class="btn btn--primary header-cta" href="../contato/?interesse=consultoria">Agendar uma conversa</a>
+    <button class="menu-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Abrir menu">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="conteudo">
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-dash" viewBox="0 0 24 24"><path d="M6 12h12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
@@ -278,27 +107,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
   <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 11V8a4 4 0 018 0v3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
 </svg>
 
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="#inicio">
-      <svg viewBox="0 0 30 30" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="7" fill="#00875A"/><path d="M8 19l5-8 4 5 5-7" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Export Link Docs
-    </a>
-    <nav aria-label="Seções">
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#rotas">Rotas</a>
-      <a href="#roi">Economia</a>
-      <a href="#faq">Perguntas</a>
-    </nav>
-    <a class="btn btn-cta btn-sm" href="#contato">Agendar demonstração</a>
-  </div>
-</header>
-
-<main id="inicio">
+<div class="lp">
   <section class="hero">
     <div class="wrap">
       <div class="hero-copy">
-        <p class="kicker">Software para departamentos de exportação</p>
+        <p class="kicker">Export Link Docs · módulo do software Export Link</p>
         <h1>Digite o pedido uma vez. <span>Receba os três documentos.</span></h1>
         <p class="lede">Proforma invoice, commercial invoice e packing list gerados da mesma fonte, sem redigitar cliente, itens, pesos ou preços. Menos erro no embarque e um departamento que funciona igual com qualquer pessoa no comando.</p>
         <div class="hero-ctas">
@@ -316,7 +129,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
     <div class="wrap shot-wrap">
       <figure class="shot">
         <div class="shot-bar"><div class="dots"><i></i><i></i><i></i></div><span>Export Link Docs · Proforma</span></div>
-        <img src="tela-export-link.jpg" width="2160" height="1805" alt="Tela do Export Link Docs: proforma EXP-0142/26 para Muebles Andinos S.A.C., com cliente, dados da proforma e três itens de móveis totalizando US$ 28.320,00">
+        <img src="../img/docs-tela.jpg" width="2160" height="1805" alt="Tela do Export Link Docs: proforma EXP-0142/26 para Muebles Andinos S.A.C., com cliente, dados da proforma e três itens de móveis totalizando US$ 28.320,00">
         <figcaption>Tela real do sistema, com dados de exemplo.</figcaption>
       </figure>
     </div>
@@ -539,15 +352,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       </form>
     </div>
   </section>
-</main>
-
-<footer>
-  <div class="wrap">
-    <span>Export Link Docs · documentos de exportação sem retrabalho</span>
-    <span><a href="mailto:comercial@exportlink.com.br">comercial@exportlink.com.br</a> · +55 41 99264-0066</span>
-    <span>Proforma · Invoice · Packing List · Formação de preço</span>
-  </div>
-</footer>
+</div>
 
 <script>
 /* Contato da demonstração: troque pelo número do WhatsApp comercial (só dígitos, com 55 + DDD). */
@@ -615,5 +420,59 @@ document.getElementById('demo-form').addEventListener('submit', function (e) {
   t.textContent = 'Itajaí, BR';
 })();
 </script>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="../"><svg class="brand__mark" viewBox="0 0 30 30" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="7" fill="#00875A"/><path d="M8 19l5-8 4 5 5-7" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand__text"><span class="brand__name">Export Link</span><span class="brand__sub">Global Solutions</span></span></a>
+        <p class="footer-tagline">Suporte à exportação para empresas brasileiras.</p>
+        <div class="social">
+          <a data-social="linkedin" href="#" hidden target="_blank" rel="noopener" aria-label="LinkedIn"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.6c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+          <a data-social="instagram" href="#" hidden target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h2>Páginas</h2>
+        <ul>
+          <li><a href="../">Início</a></li>
+          <li><a href="../software/">Software</a></li>
+          <li><a href="../consultoria/">Como trabalhamos</a></li>
+          <li><a href="../sobre/">Sobre</a></li>
+          <li><a href="../contato/">Contato</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Contato</h2>
+        <ul>
+          <li>WhatsApp: +55 41 99264-0066</li>
+          <li>comercial@exportlink.com.br</li>
+          <li>Rua Gil Stein, 258 · Itajaí · SC</li>
+          <li>Segunda a sexta, das 9h às 18h</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Idioma</h2>
+        <div class="lang"><span aria-current="true" lang="pt-BR">PT</span><span class="sep">|</span><a href="../es/software/" lang="es" hreflang="es">ES</a><span class="sep">|</span><a href="../en/software/" lang="en" hreflang="en">EN</a></div>
+        <ul class="footer-legal-links">
+          <li><a href="../termos/">Termos de Uso</a></li>
+          <li><a href="../privacidade/">Política de Privacidade</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>© 2026 Export Link Global Solutions</span>
+      <span>A Export Link não é despachante, nem transportadora, nem representante comercial.</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-float" data-wa="Olá! Vim pelo site da Export Link." href="https://wa.me/5541992640066" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6a2.8 2.8 0 0 0 1.8-1.3 2.3 2.3 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>
+</a>
+
+<script src="../js/config.js"></script>
+<script src="../js/main.js" defer></script>
 </body>
 </html>
