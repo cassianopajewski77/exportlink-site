@@ -596,3 +596,4 @@ body::before { background: var(--navy); }
 .page-hero .btn--ghost:hover { border-color: var(--on-navy-muted); background: transparent; color: var(--white); }
 .brand__sub { white-space: nowrap; }
 @media (max-width: 420px) { .brand__sub { display: none; } }
+.page-hero h3, .hero h3 { color: var(--white); }

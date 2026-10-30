@@ -40,7 +40,7 @@ T = {
         "pages": {
             "": ("Export Link | Suporte à exportação e software para exportar",
                  "A Export Link monta dentro da sua empresa um ecossistema de exportação: método, documentos, preço por Incoterm e um modelo de negócio replicável em vários países."),
-            "software": ("Export Link Docs | Software de documentos e preço de exportação",
+            "software": ("Software Export Link | Documentos e preço de exportação",
                          "Proforma, commercial invoice e packing list em PDF e Excel, cadastros com validação fiscal das Américas e formação de preço por Incoterm, inclusive DDP para os EUA."),
             "consultoria": ("Como trabalhamos | Ecossistema de exportação | Export Link",
                             "A Export Link monta o ecossistema de exportação dentro da sua empresa, com um modelo de negócio replicável em vários países. Comece pela pesquisa de mercado orientativa ou pela análise prévia de exportação."),
@@ -75,7 +75,7 @@ T["es"] = {
     "pages": {
         "": ("Export Link | Soporte a la exportación y software para exportar",
              "Export Link monta dentro de su empresa un ecosistema de exportación: método, documentos, precio por Incoterm y un modelo de negocio replicable en varios países."),
-        "software": ("Export Link Docs | Software de documentos y precio de exportación",
+        "software": ("Software Export Link | Documentos y precio de exportación",
                      "Proforma, commercial invoice y packing list en PDF y Excel, registros con validación fiscal de las Américas y formación de precio por Incoterm, incluso DDP a EE. UU."),
         "consultoria": ("Cómo trabajamos | Ecosistema de exportación | Export Link",
                         "Export Link monta el ecosistema de exportación dentro de su empresa, con un modelo de negocio replicable en varios países. Empiece por la investigación de mercado orientativa o por el análisis previo de exportación."),
@@ -109,7 +109,7 @@ T["en"] = {
     "pages": {
         "": ("Export Link | Export support and export software",
              "Export Link builds an export ecosystem inside your company: method, documents, pricing by Incoterm and a business model you can replicate in many countries."),
-        "software": ("Export Link Docs | Export documents and pricing software",
+        "software": ("Export Link software | Export documents and pricing",
                      "Pro forma, commercial invoice and packing list in PDF and Excel, tax ID validation across the Americas and export pricing by Incoterm, including DDP to the US."),
         "consultoria": ("How we work | Export ecosystem | Export Link",
                         "Export Link builds the export ecosystem inside your company, with a business model you can replicate in many countries. Start with a market research report or an export pre-assessment."),
@@ -167,8 +167,8 @@ def jsonld(lang):
             },
             {
                 "@type": "SoftwareApplication",
-                "name": "Export Link Docs",
-                "alternateName": "Export Docs Pro",
+                "name": "Export Link",
+                "alternateName": "Export Link Docs",
                 "applicationCategory": "BusinessApplication",
                 "inLanguage": LANGS[lang]["html"],
                 "description": T[lang]["pages"]["software"][1],
@@ -337,8 +337,8 @@ def write_sitemap():
             ) + f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{BASE + url_of("pt", slug)}"/>'
             prio = "1.0" if slug == "" else ("0.3" if slug in ("termos", "privacidade") else "0.8")
             rows.append(f"  <url>\n    <loc>{BASE + url_of(lang, slug)}</loc>{alts}\n    <priority>{prio}</priority>\n  </url>")
-    # Landing do Export Link Pro (página avulsa, fora do build)
-    rows.append(f"  <url>\n    <loc>{BASE}export-link-pro/</loc>\n    <priority>0.8</priority>\n  </url>")
+    # Landing do módulo Export Link Docs (página avulsa, fora do build)
+    rows.append(f"  <url>\n    <loc>{BASE}docs/</loc>\n    <priority>0.8</priority>\n  </url>")
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
            + "\n".join(rows) + "\n</urlset>\n")
