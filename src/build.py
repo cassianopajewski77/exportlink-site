@@ -27,7 +27,7 @@ T = {
         "nav": {"": "Início", "software": "Software", "consultoria": "Como trabalhamos", "sobre": "Sobre", "contato": "Contato"},
         "nav_label": "Principal",
         "lang_label": "Idioma",
-        "demo": "Solicitar demonstração",
+        "demo": "Agendar uma conversa",
         "menu": "Abrir menu",
         "tagline": "Suporte à exportação para empresas brasileiras.",
         "h_pages": "Páginas", "h_contact": "Contato", "h_lang": "Idioma",
@@ -62,7 +62,7 @@ T["es"] = {
     "nav": {"": "Inicio", "software": "Software", "consultoria": "Cómo trabajamos", "sobre": "Nosotros", "contato": "Contacto"},
     "nav_label": "Principal",
     "lang_label": "Idioma",
-    "demo": "Solicitar demostración",
+    "demo": "Agendar una conversación",
     "menu": "Abrir menú",
     "tagline": "Soporte a la exportación para empresas brasileñas.",
     "h_pages": "Páginas", "h_contact": "Contacto", "h_lang": "Idioma",
@@ -96,7 +96,7 @@ T["en"] = {
     "nav": {"": "Home", "software": "Software", "consultoria": "How we work", "sobre": "About", "contato": "Contact"},
     "nav_label": "Main",
     "lang_label": "Language",
-    "demo": "Request a demo",
+    "demo": "Book a call",
     "menu": "Open menu",
     "tagline": "Export support for Brazilian companies.",
     "h_pages": "Pages", "h_contact": "Contact", "h_lang": "Language",
@@ -199,7 +199,7 @@ def page(lang, slug, body):
 
     nav = "\n      ".join(nav_link(s) for s in t["nav"])
     foot_pages = "\n          ".join(f'<li><a href="{rel(here, url_of(lang, s))}">{t["nav"][s]}</a></li>' for s in t["nav"])
-    demo_href = rel(here, url_of(lang, "contato")) + "?interesse=software"
+    demo_href = rel(here, url_of(lang, "contato")) + "?interesse=consultoria"
     home = rel(here, url_of(lang, ""))
     body = body.replace("{P}", P).replace("{L}", rel(here, L["dir"]) if L["dir"] else P)
 
