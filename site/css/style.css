@@ -666,3 +666,6 @@ main section[id] { scroll-margin-top: 136px; }
 .brand__logo { display: block; height: 42px; width: auto; }
 .site-footer .brand__logo { height: 44px; }
 @media (max-width: 420px) { .brand__logo { height: 32px; } }
+/* Imagem do ecossistema de exportação (página Serviços) */
+.eco-figure { margin: 8px 0 0; }
+.eco-figure img { display: block; width: 100%; height: auto; border-radius: 12px; box-shadow: 0 24px 48px -16px rgba(0,0,0,.45); }
