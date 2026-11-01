@@ -692,3 +692,12 @@ main section[id] { scroll-margin-top: 136px; }
 .eco-full { margin: clamp(24px, 4vw, 48px) 0 0; width: 100%; }
 .eco-full img { display: block; width: 100%; height: auto; }
 .page-hero--eco { background: linear-gradient(180deg, var(--navy) 0%, #011935 100%); }
+/* Software: topo claro com a imagem dos aparelhos de ponta a ponta */
+.page-hero.page-hero--light { background: #FEFEFE; color: var(--ink); border-bottom: 0; padding-bottom: 0; }
+.page-hero--light h1 { color: var(--navy); }
+.page-hero--light .lead, .page-hero--light p { color: var(--muted); }
+.page-hero--light .eyebrow { color: var(--accent); }
+.page-hero--light .btn--ghost { border-color: var(--navy); color: var(--navy); }
+.page-hero--light .btn--ghost:hover { background: var(--navy); color: var(--white); }
+.devices-full { margin: clamp(16px, 3vw, 32px) 0 0; }
+.devices-full img { display: block; width: 100%; max-width: 1760px; height: auto; margin-inline: auto; }
