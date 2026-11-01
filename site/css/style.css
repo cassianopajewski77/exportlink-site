@@ -687,3 +687,8 @@ main section[id] { scroll-margin-top: 136px; }
   .photo-hero::before { background: linear-gradient(0deg, rgba(6,22,40,.95) 0%, rgba(6,22,40,.8) 45%, rgba(6,22,40,.35) 100%); }
   .photo-hero__inner { padding-top: 220px; }
 }
+/* Serviços: imagem do ecossistema de ponta a ponta */
+.page-hero--eco { padding-bottom: 0; }
+.eco-full { margin: clamp(24px, 4vw, 48px) 0 0; width: 100%; }
+.eco-full img { display: block; width: 100%; height: auto; }
+.page-hero--eco { background: linear-gradient(180deg, var(--navy) 0%, #011935 100%); }
