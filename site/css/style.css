@@ -636,3 +636,20 @@ main section[id] { scroll-margin-top: 136px; }
 @media (max-width: 760px) {
   .page-index__label { display: none; }
 }
+
+/* Página Software: proforma com foto do produto e ficha técnica */
+.doc .item { display: flex; align-items: center; gap: 10px; }
+.doc .item img { width: 40px; height: 40px; border-radius: 6px; flex: none; border: 1px solid var(--line); }
+.spec { grid-template-columns: 140px minmax(0, 1fr); align-items: start; gap: 18px; }
+.doc .spec__img { width: 140px; height: 140px; border-radius: 8px; border: 1px solid var(--line); aspect-ratio: 1; object-fit: contain; max-width: none; }
+.spec__data { display: grid; gap: 6px; min-width: 0; }
+.spec__list { display: grid; gap: 8px; margin: 8px 0 0; }
+.spec__list div { display: flex; justify-content: space-between; gap: 12px; padding-bottom: 6px; border-bottom: 1px solid var(--paper); }
+.spec__list dt { color: var(--muted); }
+.spec__list dd { margin: 0; font-weight: 600; text-align: right; }
+@media (max-width: 480px) { .spec { grid-template-columns: 1fr; } .doc .spec__img { width: 100px; height: 100px; } }
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.checks li { position: relative; padding-left: 28px; }
+.checks li::before { content: ""; position: absolute; left: 0; top: .3em; width: 18px; height: 18px; border-radius: 50%; background: var(--green-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300875A' stroke-width='3'%3E%3Cpath d='M6 12.5l4 4L18 8'/%3E%3C/svg%3E") center / 12px no-repeat; }
+@media (max-width: 560px) { .page-hero .doc th:nth-child(2), .page-hero .doc td:nth-child(2) { display: none; } .doc .item img { width: 30px; height: 30px; } .doc .item { gap: 8px; } }
+.shot .doc img { display: block; width: 100%; height: auto; aspect-ratio: auto; border-radius: 0; }
