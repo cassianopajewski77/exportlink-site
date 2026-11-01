@@ -99,6 +99,7 @@
         <p class="lead">Export Link Docs organizes your international order routine. Information follows a single flow, from the order to the pro forma and the other documents, so your salespeople answer buyers faster.</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="../../en/contato/index.html?interesse=software">Request a demo</a>
+          <button type="button" class="btn btn--ghost" data-open-modelos>See document templates</button>
           <a class="btn btn--ghost" href="#como">See how it works</a>
         </div>
         <p class="hero__note">In the cloud: use it on your computer, iPad and phone.</p>
@@ -145,12 +146,10 @@
           <li>Descriptions in Portuguese and Spanish</li>
           <li>Sheet or pro forma sent to the buyer as a PDF</li>
         </ul>
+        <button type="button" class="btn btn--primary btn-modelos" data-open-modelos>See document templates</button>
       </div>
-      <figure class="hero__figure shot">
-        <div class="doc">
-          <div class="doc__bar" aria-hidden="true"><i></i><i></i><i></i><span>Export Link Docs · Proforma</span></div>
-          <img src="../../img/docs-proforma-itens.jpg" width="1400" height="511" alt="Real Export Link Docs screen: pro forma items with photo column, code, Spanish and Portuguese descriptions, NCM code, quantity and FOB total of 28,320 dollars." loading="lazy">
-        </div>
+      <figure class="hero__figure shot shot--tela">
+        <img src="../../img/export-link-docs-tela.jpg" width="2000" height="1250" alt="Export Link Docs screen: pro forma items with a photo of each product, code, description, NCM code, quantity and FOB total of 28,320 dollars." loading="lazy">
         <figcaption class="doc-caption">Every product with photo, code, Spanish and Portuguese descriptions and NCM code.</figcaption>
       </figure>
     </div>
@@ -168,6 +167,16 @@
     </div>
   </section>
 </main>
+
+  <dialog class="docmodal" id="modelos" aria-labelledby="modelos-title">
+    <div class="docmodal__head">
+      <h2 id="modelos-title">Document templates</h2>
+      <div class="docmodal__tabs" role="tablist"><button type="button" role="tab" data-doc="../../img/modelo-proforma.jpg" data-alt="Template: Proforma Invoice" aria-selected="true">Proforma Invoice</button><button type="button" role="tab" data-doc="../../img/modelo-invoice.jpg" data-alt="Template: Commercial Invoice" aria-selected="false">Commercial Invoice</button><button type="button" role="tab" data-doc="../../img/modelo-packing.jpg" data-alt="Template: Packing List" aria-selected="false">Packing List</button></div>
+      <button type="button" class="docmodal__close" aria-label="Close">&times;</button>
+    </div>
+    <div class="docmodal__view"><img class="docmodal__img" src="../../img/modelo-proforma.jpg" width="1240" height="1247" alt="Template: Proforma Invoice" loading="lazy"></div>
+    <p class="docmodal__note">Example with fictitious data. Every document carries your logo, your products and their photos.</p>
+  </dialog>
 
 <footer class="site-footer">
   <div class="wrap">
@@ -222,5 +231,6 @@
 
 <script src="../../js/config.js"></script>
 <script src="../../js/main.js" defer></script>
+<script src="../../js/modelos.js" defer></script>
 </body>
 </html>

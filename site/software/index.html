@@ -99,6 +99,7 @@
         <p class="lead">O Export Link Docs organiza a rotina de pedidos internacionais. A informação segue um fluxo único, do pedido à proforma e aos demais documentos, e o vendedor responde ao cliente mais rápido.</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="../contato/index.html?interesse=software">Solicitar demonstração</a>
+          <button type="button" class="btn btn--ghost" data-open-modelos>Ver modelos de documentos</button>
           <a class="btn btn--ghost" href="../docs/index.html">Conhecer o Export Link Docs</a>
         </div>
         <p class="hero__note">Na nuvem: use no computador, no iPad e no celular.</p>
@@ -145,12 +146,10 @@
           <li>Descrição em português e em espanhol</li>
           <li>Ficha ou proforma enviada ao cliente em PDF</li>
         </ul>
+        <button type="button" class="btn btn--primary btn-modelos" data-open-modelos>Ver modelos de documentos</button>
       </div>
-      <figure class="hero__figure shot">
-        <div class="doc">
-          <div class="doc__bar" aria-hidden="true"><i></i><i></i><i></i><span>Export Link Docs · Proforma</span></div>
-          <img src="../img/docs-proforma-itens.jpg" width="1400" height="511" alt="Tela real do Export Link Docs: itens da proforma com coluna de foto, código, descrição em espanhol e em português, NCM, quantidade e total FOB de 28.320 dólares." loading="lazy">
-        </div>
+      <figure class="hero__figure shot shot--tela">
+        <img src="../img/export-link-docs-tela.jpg" width="2000" height="1250" alt="Tela do Export Link Docs: proforma com itens, foto de cada produto, código, descrição, NCM, quantidade e total FOB de 28.320 dólares." loading="lazy">
         <figcaption class="doc-caption">Cada produto com foto, código, descrição em espanhol e em português e NCM.</figcaption>
       </figure>
     </div>
@@ -168,6 +167,16 @@
     </div>
   </section>
 </main>
+
+  <dialog class="docmodal" id="modelos" aria-labelledby="modelos-title">
+    <div class="docmodal__head">
+      <h2 id="modelos-title">Modelos de documentos</h2>
+      <div class="docmodal__tabs" role="tablist"><button type="button" role="tab" data-doc="../img/modelo-proforma.jpg" data-alt="Modelo de Proforma Invoice" aria-selected="true">Proforma Invoice</button><button type="button" role="tab" data-doc="../img/modelo-invoice.jpg" data-alt="Modelo de Commercial Invoice" aria-selected="false">Commercial Invoice</button><button type="button" role="tab" data-doc="../img/modelo-packing.jpg" data-alt="Modelo de Packing List" aria-selected="false">Packing List</button></div>
+      <button type="button" class="docmodal__close" aria-label="Fechar">&times;</button>
+    </div>
+    <div class="docmodal__view"><img class="docmodal__img" src="../img/modelo-proforma.jpg" width="1240" height="1247" alt="Modelo de Proforma Invoice" loading="lazy"></div>
+    <p class="docmodal__note">Exemplo com dados fictícios. Cada documento sai com a sua logo, os seus produtos e as fotos.</p>
+  </dialog>
 
 <footer class="site-footer">
   <div class="wrap">
@@ -222,5 +231,6 @@
 
 <script src="../js/config.js"></script>
 <script src="../js/main.js" defer></script>
+<script src="../js/modelos.js" defer></script>
 </body>
 </html>

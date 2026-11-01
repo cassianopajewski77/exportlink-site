@@ -701,3 +701,20 @@ main section[id] { scroll-margin-top: 136px; }
 .page-hero--light .btn--ghost:hover { background: var(--navy); color: var(--white); }
 .devices-full { margin: clamp(16px, 3vw, 32px) 0 0; }
 .devices-full img { display: block; width: 100%; max-width: 1760px; height: auto; margin-inline: auto; }
+.split .shot--tela img{aspect-ratio:auto;object-fit:contain;display:block;width:100%;height:auto;border-radius:14px;box-shadow:0 24px 60px rgba(10,37,64,.18)}
+/* Modelos de documentos (pop-up) */
+.docmodal{border:0;padding:0;border-radius:16px;width:min(980px,94vw);max-height:92vh;overflow:hidden;box-shadow:0 30px 80px rgba(10,37,64,.35)}
+.docmodal::backdrop{background:rgba(10,37,64,.72)}
+.docmodal[open]{display:flex;flex-direction:column}
+.docmodal__head{display:flex;align-items:center;gap:16px;padding:16px 20px;background:var(--navy,#0A2540);color:#fff;flex-wrap:wrap}
+.docmodal__head h2{margin:0;font-size:1.1rem;color:#fff;flex:1 1 auto}
+.docmodal__tabs{display:flex;gap:8px;flex-wrap:wrap}
+.docmodal__tabs button{font:inherit;font-size:.9rem;font-weight:600;padding:8px 14px;border-radius:999px;border:1.5px solid rgba(255,255,255,.35);background:transparent;color:#fff;cursor:pointer}
+.docmodal__tabs button[aria-selected="true"]{background:#fff;color:var(--navy,#0A2540);border-color:#fff}
+.docmodal__close{font:inherit;font-size:1.6rem;line-height:1;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;cursor:pointer}
+.docmodal__view{overflow:auto;background:#E9EEF4;padding:20px}
+.docmodal__img{display:block;width:100%;height:auto;background:#fff;border-radius:6px;box-shadow:0 4px 18px rgba(10,37,64,.15)}
+.docmodal__note{margin:0;padding:10px 20px;font-size:.85rem;color:#4A5D72;background:#fff}
+.btn-modelos{margin-top:22px;width:auto;justify-self:start;align-self:flex-start;display:inline-flex}
+@media (max-width:640px){.docmodal__head h2{flex-basis:100%;order:-1}.docmodal__view{padding:10px}.docmodal__close{position:absolute;top:10px;right:10px}}
+@media (min-width:900px){.page-hero--stack .btn-row{width:max-content;flex-wrap:nowrap}}
