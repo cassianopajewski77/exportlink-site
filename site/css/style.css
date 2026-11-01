@@ -10,13 +10,13 @@
   --paper: #F4F6F8;       /* faixas claras */
   --white: #FFFFFF;
   --line: #DDE3EA;        /* bordas e divisórias */
-  --accent: #00875A;      /* azul médio: botões e links */
-  --accent-dark: #006B47;
+  --accent: #0055C3;      /* azul médio: botões e links */
+  --accent-dark: #00439C;
   --on-navy-muted: #A9BBCE;
   --whatsapp: #1F8A4C;
   --navy-line: #24476A;
-  --green-on-navy: #4FD69C;
-  --green-soft: #E3F4EC;
+  --green-on-navy: #4D9BFF;
+  --green-soft: #E6EFFB;
   --orange: #FF6B00;     /* só nos botões de ação, como no exportlink.com.br */
   --orange-hover: #E85F00;
 
@@ -650,7 +650,7 @@ main section[id] { scroll-margin-top: 136px; }
 @media (max-width: 480px) { .spec { grid-template-columns: 1fr; } .doc .spec__img { width: 100px; height: 100px; } }
 .checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .checks li { position: relative; padding-left: 28px; }
-.checks li::before { content: ""; position: absolute; left: 0; top: .3em; width: 18px; height: 18px; border-radius: 50%; background: var(--green-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300875A' stroke-width='3'%3E%3Cpath d='M6 12.5l4 4L18 8'/%3E%3C/svg%3E") center / 12px no-repeat; }
+.checks li::before { content: ""; position: absolute; left: 0; top: .3em; width: 18px; height: 18px; border-radius: 50%; background: var(--green-soft) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230055C3' stroke-width='3'%3E%3Cpath d='M6 12.5l4 4L18 8'/%3E%3C/svg%3E") center / 12px no-repeat; }
 @media (max-width: 560px) { .page-hero .doc th:nth-child(2), .page-hero .doc td:nth-child(2) { display: none; } .doc .item img { width: 30px; height: 30px; } .doc .item { gap: 8px; } }
 .shot .doc img { display: block; width: 100%; height: auto; aspect-ratio: auto; border-radius: 0; }
 
@@ -662,3 +662,7 @@ main section[id] { scroll-margin-top: 136px; }
 .split--stack .checks { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 32px; }
 @media (max-width: 700px) { .split--stack .checks { grid-template-columns: 1fr; } }
 .shot .doc-caption { text-align: left; }
+/* Logo Export Link (imagem) */
+.brand__logo { display: block; height: 42px; width: auto; }
+.site-footer .brand__logo { height: 44px; }
+@media (max-width: 420px) { .brand__logo { height: 32px; } }
