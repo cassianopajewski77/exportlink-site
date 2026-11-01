@@ -736,3 +736,22 @@ main section[id] { scroll-margin-top: 136px; }
 /* Software: figura primeiro, texto abaixo */
 .page-hero.page-hero--fig-first { padding-top: clamp(12px, 2vw, 24px); padding-bottom: clamp(40px, 5vw, 64px); }
 .page-hero--fig-first .devices-full { margin: 0 0 clamp(20px, 3vw, 36px); }
+/* Início: banner dos cinco pilares */
+.pilares-banner { background: #00234B; overflow: hidden; }
+.ecossistema-banner { width: 100%; height: auto; display: block; object-fit: contain; }
+.pilares-banner--img .pilares-cards { display: none; }
+.pilares-cards { padding-block: clamp(28px, 4vw, 48px); }
+.pilares-cards ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+.pilares-cards li { background: linear-gradient(180deg, #0A3A78 0%, #062B5C 100%); border: 1px solid rgba(77,155,255,.45); border-radius: 16px; padding: 22px 18px; text-align: center; display: grid; gap: 8px; justify-items: center; align-content: start; }
+.pilares-cards svg { width: 44px; height: 44px; color: #4DB3FF; }
+.pilares-cards h3 { color: #fff; font-size: 1.05rem; margin: 6px 0 0; }
+.pilares-cards p { color: #C9D7E6; font-size: .92rem; margin: 0; }
+@media (max-width: 1000px) { .pilares-cards ul { grid-template-columns: repeat(2, minmax(0, 1fr)); } .pilares-cards li:last-child { grid-column: 1 / -1; } }
+@media (max-width: 640px) {
+  .pilares-banner--img .ecossistema-banner { display: none; }
+  .pilares-banner--img .pilares-cards { display: block; }
+  .pilares-cards ul { grid-template-columns: 1fr; gap: 12px; }
+  .pilares-cards li { grid-template-columns: 44px 1fr; text-align: left; justify-items: start; column-gap: 14px; padding: 16px; }
+  .pilares-cards li svg { grid-row: span 2; width: 36px; height: 36px; }
+  .pilares-cards h3 { margin: 0; }
+}
