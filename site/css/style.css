@@ -737,7 +737,7 @@ main section[id] { scroll-margin-top: 136px; }
 .page-hero.page-hero--fig-first { padding-top: clamp(12px, 2vw, 24px); padding-bottom: clamp(40px, 5vw, 64px); }
 .page-hero--fig-first .devices-full { margin: 0 0 clamp(20px, 3vw, 36px); }
 /* Início: banner dos cinco pilares */
-.pilares-banner { background: #00234B; overflow: hidden; }
+.pilares-banner { background: #D5EBFD; overflow: hidden; }
 .ecossistema-banner { width: 100%; height: auto; display: block; object-fit: contain; }
 .pilares-banner--img .pilares-cards { display: none; }
 .pilares-cards { padding-block: clamp(28px, 4vw, 48px); }
