@@ -763,3 +763,44 @@ main section[id] { scroll-margin-top: 136px; }
   .eco-steps img { display: block; width: 100%; height: auto; border-radius: 14px; }
 }
 .pilares-banner.pilares-banner--escuro { background: #00234B; }
+
+/* Serviços (2026-11-02): cards em faixa azul-marinho, no estilo dos cinco pilares do Sobre nós */
+.svc-band { background: radial-gradient(120% 90% at 50% 0%, #0B3A73 0%, #00234B 55%, #001A38 100%); color: var(--white); }
+.svc-band h2, .svc-band h3 { color: var(--white); }
+.svc-band .lead { color: #C3D4E8; }
+.svc-band .eyebrow { color: var(--green-on-navy); }
+.svc-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 8px; }
+.svc-card { position: relative; display: flex; flex-direction: column; gap: 12px; padding: 28px 24px 24px; border-radius: 16px;
+  background: linear-gradient(180deg, rgba(31,111,214,.28) 0%, rgba(5,40,86,.6) 100%);
+  border: 1px solid rgba(77,155,255,.45); box-shadow: 0 0 0 1px rgba(77,155,255,.08) inset, 0 18px 40px -20px rgba(0,0,0,.6), 0 0 30px -10px rgba(77,155,255,.45); }
+.svc-card::after { content: ""; position: absolute; left: 20%; right: 20%; bottom: -1px; height: 2px; background: linear-gradient(90deg, transparent, #4D9BFF, transparent); }
+.svc-card__icon { width: 64px; height: 64px; border-radius: 14px; display: grid; place-items: center; background: rgba(77,155,255,.14); color: #8CC2FF; }
+.svc-card__icon svg { width: 38px; height: 38px; }
+.svc-card h3 { font-size: 1.2rem; }
+.svc-card p { color: #C3D4E8; font-size: .97rem; margin: 0; }
+.svc-card__chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto !important; padding-top: 6px; }
+.svc-card__chips span { font-size: .85rem; font-weight: 600; color: var(--white); background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: 3px 10px; }
+.svc-card .btn { align-self: stretch; justify-content: center; text-align: center; }
+.svc-card__badge { position: absolute; top: 16px; right: 16px; font: 800 .75rem/1 var(--font-display); letter-spacing: .06em; text-transform: uppercase; color: var(--navy); background: var(--orange); border-radius: 999px; padding: 6px 10px; }
+@media (max-width: 1100px) { .svc-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .svc-grid { grid-template-columns: 1fr; } }
+
+.report-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.report-grid li { background: var(--white); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: grid; gap: 6px; align-content: start; }
+.report-grid svg { width: 30px; height: 30px; color: var(--accent); }
+.report-grid h3 { font-size: 1.05rem; }
+.report-grid p { margin: 0; color: var(--muted); font-size: .94rem; }
+@media (max-width: 1000px) { .report-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .report-grid { grid-template-columns: 1fr; } }
+.report-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; margin: 28px 0 16px; }
+.report-price { margin: 0; font-size: 1.1rem; color: var(--navy); }
+.report-price b { font: 800 1.6rem/1 var(--font-display); }
+
+.amz { background: linear-gradient(180deg, #FFFFFF 0%, #EAF3FE 100%); }
+.amz-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; counter-reset: s; }
+.amz-steps li { position: relative; background: var(--white); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 12px; padding: 22px 18px 18px; display: grid; gap: 6px; align-content: start; box-shadow: 0 10px 24px -18px rgba(10,37,64,.45); }
+.amz-steps__n { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font: 800 1rem/1 var(--font-display); color: var(--white); background: var(--navy); }
+.amz-steps h3 { font-size: 1.05rem; }
+.amz-steps p { margin: 0; color: var(--muted); font-size: .94rem; }
+@media (max-width: 1000px) { .amz-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .amz-steps { grid-template-columns: 1fr; } }
