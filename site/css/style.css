@@ -755,3 +755,10 @@ main section[id] { scroll-margin-top: 136px; }
   .pilares-cards li svg { grid-row: span 2; width: 36px; height: 36px; }
   .pilares-cards h3 { margin: 0; }
 }
+/* Serviços: ecossistema em etapas no celular */
+.eco-steps { display: none; }
+@media (max-width: 700px) {
+  .eco-full .eco-full__desk { display: none; }
+  .eco-steps { display: grid; gap: 12px; list-style: none; margin: 0; padding: 16px; background: #011935; }
+  .eco-steps img { display: block; width: 100%; height: auto; border-radius: 14px; }
+}
