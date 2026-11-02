@@ -804,3 +804,6 @@ main section[id] { scroll-margin-top: 136px; }
 .amz-steps p { margin: 0; color: var(--muted); font-size: .94rem; }
 @media (max-width: 1000px) { .amz-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .amz-steps { grid-template-columns: 1fr; } }
+/* Ecossistema em 6 etapas dentro do Sobre nós (página inicial) */
+.page-hero--eco h2 { color: var(--white); font-size: var(--step-4); }
+.svc-band h1 { color: var(--white); font-size: var(--step-4); }
