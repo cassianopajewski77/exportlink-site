@@ -807,3 +807,13 @@ main section[id] { scroll-margin-top: 136px; }
 /* Ecossistema em 6 etapas dentro do Sobre nós (página inicial) */
 .page-hero--eco h2 { color: var(--white); font-size: var(--step-4); }
 .svc-band h1 { color: var(--white); font-size: var(--step-4); }
+
+/* Seção Amazon EUA em azul-marinho, igual à faixa de serviços */
+.amz { background: radial-gradient(120% 90% at 50% 0%, #0B3A73 0%, #00234B 55%, #001A38 100%); color: var(--white); }
+.amz h2, .amz h3 { color: var(--white); }
+.amz .lead { color: #C3D4E8; }
+.amz .eyebrow { color: var(--green-on-navy); }
+.amz-steps li { background: linear-gradient(180deg, rgba(31,111,214,.28) 0%, rgba(5,40,86,.6) 100%); border: 1px solid rgba(77,155,255,.45); border-top: 4px solid #4D9BFF; box-shadow: 0 18px 40px -20px rgba(0,0,0,.6), 0 0 30px -10px rgba(77,155,255,.45); }
+.amz-steps__n { background: #4D9BFF; color: #00234B; }
+.amz-steps p { color: #C3D4E8; }
+.amz .note { color: #A9BBCE; border-left-color: #24476A; }
