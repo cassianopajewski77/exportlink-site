@@ -1,6 +1,7 @@
 /* Export Link: Diagnóstico de prontidão exportadora.
    24 perguntas em 8 áreas. Sim = 2, Em parte = 1, Não = 0.
-   Tudo roda no navegador; nada é enviado a servidor. O resultado vai para o WhatsApp só se a pessoa quiser. */
+   Cadastro obrigatório antes das perguntas. O cadastro e o resultado são enviados por e-mail para a Export Link
+   (endpoint em js/config.js). As respostas em si ficam no navegador. */
 (function () {
   "use strict";
 
@@ -58,6 +59,26 @@
   if (!root) return;
   var resp = {};
   var passo = 0;
+  var cadastro = null;
+  var CFG = window.EXPORTLINK_CONFIG || {};
+
+  var ROTULOS = { nome: "Nome", cargo: "Cargo", empresa: "Empresa", cnpj: "CNPJ", email: "E-mail", whatsapp: "WhatsApp", cidade: "Cidade/UF", produto: "Produto", exporta: "Já exporta?" };
+
+  // Envia os dados para o e-mail da Export Link (endpoint em js/config.js). Falha em silêncio: o diagnóstico continua.
+  function enviar(assunto, extra) {
+    if (!CFG.diagnosticoEndpoint || !cadastro) return;
+    var dados = { _subject: assunto, _template: "table", _captcha: "false" };
+    Object.keys(ROTULOS).forEach(function (k) { dados[ROTULOS[k]] = cadastro[k] || "-"; });
+    if (cadastro.email) dados._replyto = cadastro.email;
+    Object.keys(extra || {}).forEach(function (k) { dados[k] = extra[k]; });
+    try {
+      fetch(CFG.diagnosticoEndpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(dados)
+      }).catch(function () {});
+    } catch (e) {}
+  }
 
   function el(tag, cls, txt) {
     var e = document.createElement(tag);
@@ -201,28 +222,26 @@
       res.appendChild(ol);
     }
 
+    var extra = { "Nota geral": total + "% (" + nivel.nome + ")" };
+    notas.forEach(function (x) { extra[x.a.nome] = x.n + "%"; });
+    enviar("Diagnóstico concluído: " + cadastro.empresa + " (" + total + "%)", extra);
+
     var cta = el("div", "dg-cta");
     cta.appendChild(el("h3", null, "Receba a análise completa"));
-    cta.appendChild(el("p", null, "Mande o seu resultado para a Export Link pelo WhatsApp. Conversamos sobre os pontos fracos da sua empresa e o que fazer primeiro, sem compromisso."));
-    var form = el("form", "dg-form");
-    form.innerHTML =
-      '<label><span>Seu nome</span><input name="nome" autocomplete="name" required></label>' +
-      '<label><span>Empresa</span><input name="empresa" autocomplete="organization" required></label>';
-    var send = el("button", "btn btn--wa", "Enviar resultado pelo WhatsApp");
-    send.type = "submit";
-    form.appendChild(send);
-    form.addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      var cfg = window.EXPORTLINK_CONFIG || {};
-      var phone = cfg.whatsapp || "5541992640066";
-      var msg = "Olá! Fiz o Diagnóstico de Prontidão Exportadora no site da Export Link.\n" +
-        "Nome: " + form.nome.value.trim() + "\nEmpresa: " + form.empresa.value.trim() + "\n\n" +
-        "Nota geral: " + total + "% (" + nivel.nome + ")\n" +
-        notas.map(function (x) { return "• " + x.a.nome + ": " + x.n + "%"; }).join("\n") +
-        "\n\nQuero receber a análise completa.";
-      window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(msg), "_blank", "noopener");
-    });
-    cta.appendChild(form);
+    cta.appendChild(el("p", null, "O seu resultado já foi enviado para a Export Link. Se quiser adiantar a conversa, chame no WhatsApp: falamos sobre os pontos fracos da sua empresa e o que fazer primeiro, sem compromisso."));
+    var send = el("a", "btn btn--wa", "Falar com a Export Link no WhatsApp");
+    var phone = CFG.whatsapp || "5541992640066";
+    var msg = "Olá! Fiz o Diagnóstico de Prontidão Exportadora no site da Export Link.\n" +
+      "Nome: " + cadastro.nome + " (" + cadastro.cargo + ")\nEmpresa: " + cadastro.empresa + "\n\n" +
+      "Nota geral: " + total + "% (" + nivel.nome + ")\n" +
+      notas.map(function (x) { return "• " + x.a.nome + ": " + x.n + "%"; }).join("\n") +
+      "\n\nQuero receber a análise completa.";
+    send.href = "https://wa.me/" + phone + "?text=" + encodeURIComponent(msg);
+    send.target = "_blank";
+    send.rel = "noopener";
+    var row = el("div", "btn-row");
+    row.appendChild(send);
+    cta.appendChild(row);
     res.appendChild(cta);
 
     var redo = el("button", "btn btn--ghost dg-redo", "Refazer o diagnóstico");
@@ -233,15 +252,43 @@
     root.appendChild(res);
   }
 
-  var start = document.getElementById("dg-start");
-  if (start) {
-    start.addEventListener("click", function () {
-      root.hidden = false;
-      document.getElementById("dg-intro").hidden = true;
-      renderPasso();
-      foco();
-    });
-  } else {
+  function liberar() {
+    root.hidden = false;
+    document.getElementById("dg-intro").hidden = true;
     renderPasso();
+    foco();
   }
+
+  try { cadastro = JSON.parse(sessionStorage.getItem("dg-cadastro") || "null"); } catch (e) { cadastro = null; }
+
+  var form = document.getElementById("dg-cadastro");
+  if (!form) return;
+  if (cadastro) { liberar(); return; }
+
+  form.addEventListener("submit", function (ev) {
+    ev.preventDefault();
+    var erro = document.getElementById("dg-erro");
+    var falta = null;
+    Array.prototype.forEach.call(form.elements, function (f) {
+      if (!f.name) return;
+      var ok = f.type === "checkbox" ? f.checked : f.checkValidity() && (!f.required || f.value.trim() !== "");
+      if (f.name === "whatsapp" && f.value.replace(/\D/g, "").length < 10) ok = false;
+      f.setAttribute("aria-invalid", ok ? "false" : "true");
+      if (!ok && !falta) falta = f;
+    });
+    if (falta) {
+      erro.textContent = falta.type === "checkbox" ? "Para continuar, marque a concordância com a Política de Privacidade." :
+        falta.name === "email" ? "Confira o e-mail informado." :
+        falta.name === "whatsapp" ? "Informe o WhatsApp com DDD." : "Preencha todos os campos obrigatórios.";
+      erro.hidden = false;
+      falta.focus();
+      return;
+    }
+    erro.hidden = true;
+    cadastro = {};
+    Object.keys(ROTULOS).forEach(function (k) { cadastro[k] = (form.elements[k].value || "").trim(); });
+    try { sessionStorage.setItem("dg-cadastro", JSON.stringify(cadastro)); } catch (e) {}
+    enviar("Novo cadastro no Diagnóstico: " + cadastro.empresa, { "Etapa": "Cadastro feito, diagnóstico iniciado" });
+    liberar();
+  });
 })();

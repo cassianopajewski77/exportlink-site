@@ -3,5 +3,7 @@
 window.EXPORTLINK_CONFIG = {
   linkedin: "",   // ex.: "https://www.linkedin.com/company/exportlink"
   instagram: "",  // ex.: "https://www.instagram.com/exportlink"
-  whatsapp: "5541992640066"
+  whatsapp: "5541992640066",
+  // Para onde vão os cadastros e resultados do Diagnóstico (/diagnostico/). Deixe "" para não enviar.
+  diagnosticoEndpoint: "https://formsubmit.co/ajax/comercial@exportlink.com.br"
 };

@@ -107,12 +107,34 @@
         <div class="dg-intro__text">
           <h2>A exportação começa dentro da empresa</h2>
           <p>Vender para fora não é tarefa só do comercial. O pedido passa pela direção, pelo financeiro, pela produção, pela engenharia, pelas compras, pela logística e pelas pessoas. Se uma dessas áreas não está preparada, o cliente lá fora sente.</p>
-          <p>Responda com sinceridade, pensando em como a empresa funciona hoje. Para cada pergunta escolha <b>Sim</b>, <b>Em parte</b> ou <b>Não</b>. As respostas ficam só no seu navegador.</p>
-          <div class="btn-row"><button id="dg-start" class="btn btn--primary" type="button">Começar o diagnóstico</button></div>
+          <p>Faça o cadastro da sua empresa ao lado para liberar o diagnóstico. Depois responda com sinceridade, pensando em como a empresa funciona hoje: para cada pergunta escolha <b>Sim</b>, <b>Em parte</b> ou <b>Não</b>.</p>
+          <ul class="dg-areas" aria-label="Áreas avaliadas">
+            <li>Direção</li><li>Comercial</li><li>Financeiro</li><li>Produção</li><li>Engenharia</li><li>Suprimentos</li><li>Logística</li><li>Pessoas (RH)</li>
+          </ul>
         </div>
-        <ul class="dg-areas" aria-label="Áreas avaliadas">
-          <li>Direção</li><li>Comercial</li><li>Financeiro</li><li>Produção</li><li>Engenharia</li><li>Suprimentos</li><li>Logística</li><li>Pessoas (RH)</li>
-        </ul>
+        <form id="dg-cadastro" class="dg-cadastro" novalidate>
+          <h2>Cadastro da empresa</h2>
+          <p class="dg-cadastro__note">Campos com * são obrigatórios.</p>
+          <label><span>Seu nome *</span><input name="nome" autocomplete="name" required></label>
+          <label><span>Cargo *</span><input name="cargo" autocomplete="organization-title" required></label>
+          <label><span>Empresa *</span><input name="empresa" autocomplete="organization" required></label>
+          <label><span>CNPJ</span><input name="cnpj" inputmode="numeric" placeholder="00.000.000/0000-00"></label>
+          <label><span>E-mail *</span><input name="email" type="email" autocomplete="email" required></label>
+          <label><span>WhatsApp *</span><input name="whatsapp" type="tel" autocomplete="tel" placeholder="(00) 00000-0000" required></label>
+          <label><span>Cidade / UF *</span><input name="cidade" autocomplete="address-level2" placeholder="Ex.: Itajaí / SC" required></label>
+          <label><span>O que a empresa fabrica? *</span><input name="produto" placeholder="Ex.: móveis de madeira" required></label>
+          <label><span>A empresa já exporta? *</span>
+            <select name="exporta" required>
+              <option value="">Selecione</option>
+              <option>Ainda não exporta</option>
+              <option>Já exportou de forma pontual</option>
+              <option>Exporta com regularidade</option>
+            </select>
+          </label>
+          <label class="dg-consent"><input type="checkbox" name="consentimento" required> <span>Concordo que a Export Link use estes dados para me enviar o resultado e entrar em contato, conforme a <a href="../privacidade/index.html" target="_blank">Política de Privacidade</a>. *</span></label>
+          <p class="dg-error" id="dg-erro" role="alert" hidden></p>
+          <button class="btn btn--primary" type="submit">Liberar o diagnóstico</button>
+        </form>
       </div>
       <div id="dg-app" class="dg-app" hidden aria-live="polite"></div>
       <noscript><p>Para fazer o diagnóstico, ative o JavaScript no navegador ou fale com a gente pelo WhatsApp.</p></noscript>
