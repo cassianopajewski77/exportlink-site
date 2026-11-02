@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 1000" preserveAspectRatio="xMidYMid slice">
+<defs><filter id="w" x="0" y="0" width="1" height="1"><feTurbulence type="fractalNoise" baseFrequency="0.0012 0.004" numOctaves="1" seed="7"/><feDisplacementMap in="SourceGraphic" scale="60" xChannelSelector="R" yChannelSelector="G"/></filter>
+<linearGradient id="s" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".25"/><stop offset=".18" stop-color="#fff" stop-opacity=".14"/><stop offset=".34" stop-color="#000" stop-opacity=".22"/><stop offset=".52" stop-color="#fff" stop-opacity=".12"/><stop offset=".7" stop-color="#000" stop-opacity=".24"/><stop offset=".86" stop-color="#fff" stop-opacity=".1"/><stop offset="1" stop-color="#000" stop-opacity=".3"/></linearGradient>
+<polygon id="st" points="0,-1 0.2245,-0.309 0.951,-0.309 0.363,0.118 0.588,0.809 0,0.382 -0.588,0.809 -0.363,0.118 -0.951,-0.309 -0.2245,-0.309" fill="#fff"/></defs>
+<g filter="url(#w)">
+<rect x="-40" y="-2.0" width="1980" height="80.9" fill="#B31942"/>
+<rect x="-40" y="74.9" width="1980" height="80.9" fill="#FFFFFF"/>
+<rect x="-40" y="151.8" width="1980" height="80.9" fill="#B31942"/>
+<rect x="-40" y="228.8" width="1980" height="80.9" fill="#FFFFFF"/>
+<rect x="-40" y="305.7" width="1980" height="80.9" fill="#B31942"/>
+<rect x="-40" y="382.6" width="1980" height="80.9" fill="#FFFFFF"/>
+<rect x="-40" y="459.5" width="1980" height="80.9" fill="#B31942"/>
+<rect x="-40" y="536.5" width="1980" height="80.9" fill="#FFFFFF"/>
+<rect x="-40" y="613.4" width="1980" height="80.9" fill="#B31942"/>
+<rect x="-40" y="690.3" width="1980" height="80.9" fill="#FFFFFF"/>
+<rect x="-40" y="767.2" width="1980" height="80.9" fill="#B31942"/>
+<rect x="-40" y="844.2" width="1980" height="80.9" fill="#FFFFFF"/>
+<rect x="-40" y="921.1" width="1980" height="80.9" fill="#B31942"/>
+<rect x="-40" y="-40" width="800.0" height="578.4615384615385" fill="#0A3161"/>
+<use href="#st" transform="translate(63.3,53.8) scale(30.8)"/>
+<use href="#st" transform="translate(190.0,53.8) scale(30.8)"/>
+<use href="#st" transform="translate(316.7,53.8) scale(30.8)"/>
+<use href="#st" transform="translate(443.3,53.8) scale(30.8)"/>
+<use href="#st" transform="translate(570.0,53.8) scale(30.8)"/>
+<use href="#st" transform="translate(696.7,53.8) scale(30.8)"/>
+<use href="#st" transform="translate(126.7,107.7) scale(30.8)"/>
+<use href="#st" transform="translate(253.3,107.7) scale(30.8)"/>
+<use href="#st" transform="translate(380.0,107.7) scale(30.8)"/>
+<use href="#st" transform="translate(506.7,107.7) scale(30.8)"/>
+<use href="#st" transform="translate(633.3,107.7) scale(30.8)"/>
+<use href="#st" transform="translate(63.3,161.5) scale(30.8)"/>
+<use href="#st" transform="translate(190.0,161.5) scale(30.8)"/>
+<use href="#st" transform="translate(316.7,161.5) scale(30.8)"/>
+<use href="#st" transform="translate(443.3,161.5) scale(30.8)"/>
+<use href="#st" transform="translate(570.0,161.5) scale(30.8)"/>
+<use href="#st" transform="translate(696.7,161.5) scale(30.8)"/>
+<use href="#st" transform="translate(126.7,215.4) scale(30.8)"/>
+<use href="#st" transform="translate(253.3,215.4) scale(30.8)"/>
+<use href="#st" transform="translate(380.0,215.4) scale(30.8)"/>
+<use href="#st" transform="translate(506.7,215.4) scale(30.8)"/>
+<use href="#st" transform="translate(633.3,215.4) scale(30.8)"/>
+<use href="#st" transform="translate(63.3,269.2) scale(30.8)"/>
+<use href="#st" transform="translate(190.0,269.2) scale(30.8)"/>
+<use href="#st" transform="translate(316.7,269.2) scale(30.8)"/>
+<use href="#st" transform="translate(443.3,269.2) scale(30.8)"/>
+<use href="#st" transform="translate(570.0,269.2) scale(30.8)"/>
+<use href="#st" transform="translate(696.7,269.2) scale(30.8)"/>
+<use href="#st" transform="translate(126.7,323.1) scale(30.8)"/>
+<use href="#st" transform="translate(253.3,323.1) scale(30.8)"/>
+<use href="#st" transform="translate(380.0,323.1) scale(30.8)"/>
+<use href="#st" transform="translate(506.7,323.1) scale(30.8)"/>
+<use href="#st" transform="translate(633.3,323.1) scale(30.8)"/>
+<use href="#st" transform="translate(63.3,376.9) scale(30.8)"/>
+<use href="#st" transform="translate(190.0,376.9) scale(30.8)"/>
+<use href="#st" transform="translate(316.7,376.9) scale(30.8)"/>
+<use href="#st" transform="translate(443.3,376.9) scale(30.8)"/>
+<use href="#st" transform="translate(570.0,376.9) scale(30.8)"/>
+<use href="#st" transform="translate(696.7,376.9) scale(30.8)"/>
+<use href="#st" transform="translate(126.7,430.8) scale(30.8)"/>
+<use href="#st" transform="translate(253.3,430.8) scale(30.8)"/>
+<use href="#st" transform="translate(380.0,430.8) scale(30.8)"/>
+<use href="#st" transform="translate(506.7,430.8) scale(30.8)"/>
+<use href="#st" transform="translate(633.3,430.8) scale(30.8)"/>
+<use href="#st" transform="translate(63.3,484.6) scale(30.8)"/>
+<use href="#st" transform="translate(190.0,484.6) scale(30.8)"/>
+<use href="#st" transform="translate(316.7,484.6) scale(30.8)"/>
+<use href="#st" transform="translate(443.3,484.6) scale(30.8)"/>
+<use href="#st" transform="translate(570.0,484.6) scale(30.8)"/>
+<use href="#st" transform="translate(696.7,484.6) scale(30.8)"/>
+</g>
+<rect width="1900" height="1000" fill="url(#s)"/>
+</svg>
