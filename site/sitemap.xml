@@ -151,4 +151,8 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/privacidade/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/privacidade/"/>
   </url>
+  <url>
+    <loc>https://www.exportlink.com.br/diagnostico/</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
 </urlset>
