@@ -762,3 +762,4 @@ main section[id] { scroll-margin-top: 136px; }
   .eco-steps { display: grid; gap: 12px; list-style: none; margin: 0; padding: 16px; background: #011935; }
   .eco-steps img { display: block; width: 100%; height: auto; border-radius: 14px; }
 }
+.pilares-banner.pilares-banner--escuro { background: #00234B; }
