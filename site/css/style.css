@@ -834,3 +834,14 @@ main section[id] { scroll-margin-top: 136px; }
 .amz-steps p { color: #DCE4F0; }
 .amz .note { color: #DCE4F0; border-left-color: #B31942; }
 @media (max-width: 700px) { .amz { background-position: 0 0; background-size: auto 100%; } }
+
+/* Amazon EUA: cards brancos sobre a bandeira e faixa final branca com o botão */
+.amz-steps li { background: #FFFFFF; border: 0; border-top: 6px solid #B31942; box-shadow: 0 22px 44px -18px rgba(0,0,0,.65); backdrop-filter: none; -webkit-backdrop-filter: none; }
+.amz-steps li:nth-child(even) { border-top-color: #0A3161; }
+.amz-steps li:nth-child(even) .amz-steps__n { background: #0A3161; }
+.amz-steps h3 { color: var(--navy); }
+.amz-steps p { color: var(--muted); }
+.amz-cta { background: #FFFFFF; border-top: 6px solid #B31942; }
+.amz-cta__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 48px; }
+.amz-cta__inner > div { display: grid; gap: 10px; max-width: 680px; }
+.amz-cta .note { border-left-color: #B31942; }
