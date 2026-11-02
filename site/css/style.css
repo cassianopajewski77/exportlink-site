@@ -845,3 +845,11 @@ main section[id] { scroll-margin-top: 136px; }
 .amz-cta__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px 48px; }
 .amz-cta__inner > div { display: grid; gap: 10px; max-width: 680px; }
 .amz-cta .note { border-left-color: #B31942; }
+
+/* Selo em texto "Amazon EUA" no canto superior direito da seção (sem o logotipo oficial) */
+.amz .wrap { position: relative; }
+.amz-badge { position: absolute; top: 0; right: var(--gutter-r); margin: 0; display: grid; justify-items: end; gap: 2px;
+  padding: 12px 18px; border-radius: 12px; background: #FFFFFF; box-shadow: 0 14px 30px -14px rgba(0,0,0,.6); border-bottom: 4px solid #FF9900; }
+.amz-badge__name { font: 800 1.6rem/1 var(--font-display); color: #131A22; letter-spacing: -.01em; }
+.amz-badge__mkt { font: 600 .8rem/1.2 var(--font-body); color: #4A5D72; text-transform: uppercase; letter-spacing: .06em; }
+@media (max-width: 700px) { .amz-badge { position: static; justify-items: start; justify-self: start; width: max-content; margin-bottom: 20px; } }
