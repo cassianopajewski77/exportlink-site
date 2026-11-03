@@ -928,3 +928,12 @@ main section[id] { scroll-margin-top: 136px; }
 .dg-free{justify-self:start;display:inline-block;margin:0;background:var(--orange);color:var(--navy);font:800 var(--step--1)/1 var(--font-display);letter-spacing:.06em;text-transform:uppercase;padding:8px 14px;border-radius:999px}
 .page-hero .dg-free,.tr-dg__text .dg-free{color:var(--navy)}
 .svc-band--top, .band--top { padding-top: 32px; }
+.svc-card--feature{grid-column:1/-1;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:16px 28px;align-items:center;border-left:4px solid var(--accent)}
+.svc-card--feature__text{display:grid;gap:8px;min-width:0}
+.svc-card--feature__text p{margin:0}
+.svc-card--feature .btn{margin-top:0}
+@media (max-width:760px){.svc-card--feature{grid-template-columns:1fr;align-items:start}}
+.svc-card__chips .is-free{background:var(--orange);border-color:var(--orange);color:var(--navy);font-weight:800}
+.svc-card__badge--inline{position:static;justify-self:start}
+.svc-card--feature .btn{align-self:center;padding-inline:28px}
+@media (max-width:760px){.svc-card--feature .btn{align-self:stretch}}
