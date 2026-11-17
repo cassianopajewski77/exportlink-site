@@ -1009,3 +1009,18 @@ main section[id] { scroll-margin-top: 136px; }
   .srv-hero--banner::before { display: none; }
   .srv-hero__img { display: block; width: 100%; height: auto; aspect-ratio: 1007 / 760; object-fit: cover; object-position: center bottom; margin-bottom: 28px; }
 }
+
+/* Serviços (2026-11-17): cards dos três módulos com fundo branco, a pedido do Cassiano */
+.mod-card { background: var(--white); border: 1px solid var(--line); border-top: 5px solid var(--accent); box-shadow: 0 18px 40px -20px rgba(0,0,0,.55); }
+.svc-band .mod-card h3 { color: var(--navy); }
+.mod-card p, .mod-card__list li { color: var(--muted); }
+.mod-card__dur { color: var(--accent) !important; }
+.mod-card__icon { background: var(--green-soft); color: var(--accent); }
+.mod-card__tag { color: var(--accent); border-color: rgba(0,85,195,.35); background: var(--green-soft); }
+.mod-card__list { border-top-color: var(--line); }
+.mod-card__list b { color: var(--navy); }
+.mod-card__n { background: var(--accent); color: var(--white); }
+.mod-card__n--dot { background: var(--accent); }
+.mod-card__recv { background: var(--green-soft); border-color: rgba(0,85,195,.2); }
+.mod-card__recv-t { color: var(--accent) !important; }
+.mod-card__recv p:last-child { color: var(--navy); font-weight: 500; }
