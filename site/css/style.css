@@ -994,3 +994,18 @@ main section[id] { scroll-margin-top: 136px; }
 .srv-final { margin-top: clamp(40px, 6vw, 64px); padding-top: clamp(32px, 5vw, 48px); border-top: 1px solid rgba(255,255,255,.14); display: grid; justify-items: center; gap: 24px; text-align: center; }
 .srv-final__phrase { margin: 0; font: 800 var(--step-4)/1.12 var(--font-display); letter-spacing: -0.02em; color: var(--white); max-width: 22ch; }
 @media (max-width: 560px) { .srv-hero .btn, .srv-final .btn { width: 100%; } }
+
+/* Serviços: banner de topo com a imagem do Cassiano (porto, navio, mapa), texto em HTML por cima */
+.srv-hero--banner { position: relative; overflow: hidden; background: #01224F url(../img/servicos-banner.jpg) right center / cover no-repeat;
+  min-height: clamp(520px, 52.75vw, 760px); display: flex; align-items: center; }
+.srv-hero--banner::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(1,30,66,.55) 0%, rgba(1,30,66,.25) 40%, rgba(1,30,66,0) 60%); }
+.srv-hero--banner > .wrap { position: relative; width: 100%; }
+.srv-hero--banner h1 { max-width: 16ch; text-shadow: 0 2px 18px rgba(0,0,0,.25); }
+.srv-hero--banner .lead { max-width: 44ch; color: #E3ECF7; }
+.srv-hero__img { display: none; }
+@media (max-width: 1000px) { .srv-hero--banner::before { background: linear-gradient(90deg, rgba(1,30,66,.85) 0%, rgba(1,30,66,.6) 55%, rgba(1,30,66,.15) 100%); } }
+@media (max-width: 760px) {
+  .srv-hero--banner { display: block; min-height: 0; padding-top: 0; background: #01224F; }
+  .srv-hero--banner::before { display: none; }
+  .srv-hero__img { display: block; width: 100%; height: auto; aspect-ratio: 1007 / 760; object-fit: cover; object-position: center bottom; margin-bottom: 28px; }
+}
