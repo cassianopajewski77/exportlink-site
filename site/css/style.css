@@ -1024,3 +1024,25 @@ main section[id] { scroll-margin-top: 136px; }
 .mod-card__recv { background: var(--green-soft); border-color: rgba(0,85,195,.2); }
 .mod-card__recv-t { color: var(--accent) !important; }
 .mod-card__recv p:last-child { color: var(--navy); font-weight: 500; }
+/* Importação (2026-11-18): escritório na China, inspeção e assessoria até a entrega no Brasil */
+.imp-pieces { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1000px) { .imp-pieces { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .imp-pieces { grid-template-columns: 1fr; } }
+.imp-case { margin: 0; position: relative; padding: 28px 28px 28px 32px; border-radius: 14px; background: var(--paper); border: 1px solid var(--line); border-left: 5px solid var(--accent); display: grid; gap: 12px; }
+.imp-case p { margin: 0; font-size: 1.08rem; line-height: 1.65; color: var(--ink); }
+.imp-case__tag { justify-self: start; font: 800 .78rem/1 var(--font-display); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); background: var(--green-soft); border-radius: 999px; padding: 6px 10px; }
+.imp-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+.imp-steps li { display: grid; gap: 8px; align-content: start; padding: 22px 18px; border-radius: 14px; background: var(--white); border-top: 5px solid var(--accent); box-shadow: 0 18px 40px -20px rgba(0,0,0,.55); }
+.imp-steps .srv-steps__n { background: var(--accent); color: var(--white); width: 40px; height: 40px; font-size: 1.05rem; }
+.svc-band .imp-steps h3 { color: var(--navy); font-size: 1.08rem; }
+.imp-steps p { margin: 0; color: var(--muted); font-size: .95rem; }
+.imp-note { margin: 24px 0 0; color: #C3D4E8; border-left: 3px solid #4D9BFF; padding-left: 14px; max-width: 70ch; }
+@media (max-width: 1000px) { .imp-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .imp-steps { grid-template-columns: 1fr; } .imp-hero .btn { width: 100%; } }
+.imp-cta { background: var(--white); }
+@media (max-width: 560px) {
+  .imp-steps { gap: 10px; }
+  .imp-steps li { grid-template-columns: 40px 1fr; column-gap: 14px; row-gap: 2px; padding: 16px; }
+  .imp-steps .srv-steps__n { grid-row: span 2; }
+  .imp-steps h3 { margin: 0; }
+}

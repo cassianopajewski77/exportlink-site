@@ -155,4 +155,25 @@
     <loc>https://www.exportlink.com.br/diagnostico/</loc>
     <lastmod>2026-11-02</lastmod>
   </url>
+  <url>
+    <loc>https://www.exportlink.com.br/importacao/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/importacao/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/importacao/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/importacao/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/es/importacao/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/importacao/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/importacao/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/importacao/"/>
+  </url>
+  <url>
+    <loc>https://www.exportlink.com.br/en/importacao/</loc>
+    <lastmod>2026-10-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.exportlink.com.br/importacao/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.exportlink.com.br/es/importacao/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.exportlink.com.br/en/importacao/"/>
+  </url>
 </urlset>
