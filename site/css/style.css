@@ -1076,3 +1076,15 @@ main section[id] { scroll-margin-top: 136px; }
 .imp-fair__card .imp-fair__k { font: 800 1.5rem/1.2 var(--font-display); color: var(--white); }
 @media (max-width: 860px) { .imp-fair__grid { grid-template-columns: 1fr; } }
 @media (max-width: 560px) { .imp-fair .btn { width: 100%; } }
+/* Importação: cabeçalho e rodapé vermelhos (Cassiano, 2026-11-19) */
+.theme-cn .site-header { background: #7A0A1C; border-bottom-color: #9E1A30; }
+.theme-cn .site-footer { background: #4F0613; }
+.theme-cn .site-footer .footer-legal { border-top-color: #7A0A1C; }
+.theme-cn .site-header .btn--primary { background: var(--cn-gold); color: var(--cn-deep); }
+.theme-cn .site-header .btn--primary:hover { background: #F2B705; color: var(--cn-deep); }
+.theme-cn .lang .sep { color: #B35A68; }
+@media (max-width: 760px) {
+  .theme-cn .nav { background: #7A0A1C; border-bottom-color: #9E1A30; }
+  .theme-cn .nav a { border-bottom-color: #9E1A30; }
+  .theme-cn .menu-toggle { border-color: #B35A68; }
+}
