@@ -1046,3 +1046,33 @@ main section[id] { scroll-margin-top: 136px; }
   .imp-steps .srv-steps__n { grid-row: span 2; }
   .imp-steps h3 { margin: 0; }
 }
+/* Importação (2026-11-19): identidade própria ligada à China (vermelho e dourado), a pedido do Cassiano */
+.theme-cn { --accent: #C8102E; --accent-dark: #9E0B24; --green-soft: #FBE9EC; --green-on-navy: #FFC72C; --cn-gold: #FFC72C; --cn-deep: #4F0613; }
+.theme-cn .srv-hero, .theme-cn .svc-band { background: radial-gradient(120% 90% at 50% 0%, #B3122D 0%, #7A0A1C 55%, #4F0613 100%); }
+.theme-cn .srv-hero .lead, .theme-cn .svc-band .lead { color: #F6D9DE; }
+.theme-cn .srv-hero .eyebrow, .theme-cn .svc-band .eyebrow { color: var(--cn-gold); }
+.theme-cn main .btn--primary { background: var(--cn-gold); color: var(--cn-deep); }
+.theme-cn main .btn--primary:hover { background: #F2B705; color: var(--cn-deep); }
+.theme-cn .imp-note { color: #F6D9DE; border-left-color: var(--cn-gold); }
+.theme-cn .srv-steps li { border-color: rgba(255,199,44,.45); background: rgba(255,255,255,.07); }
+.theme-cn .srv-steps:not(.imp-steps) .srv-steps__n { background: var(--cn-gold); color: var(--cn-deep); }
+.theme-cn .srv-final { border-top-color: rgba(255,255,255,.18); }
+.theme-cn .srv-free { background: var(--cn-gold); color: var(--cn-deep); }
+@media (min-width: 761px) { .theme-cn .site-header .nav a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--cn-gold); } }
+@media (max-width: 760px) { .theme-cn .site-header .nav a[aria-current="page"] { border-bottom-color: var(--cn-gold); } }
+.theme-cn .band--paper { background: #FBF4EC; }
+.imp-hero__grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+.imp-hero__img { width: 100%; height: auto; border-radius: 28px; box-shadow: 0 30px 60px -30px rgba(0,0,0,.6); }
+@media (max-width: 900px) { .imp-hero__grid { grid-template-columns: 1fr; } .imp-hero__img { order: -1; max-width: 560px; } }
+.imp-fair { background: linear-gradient(180deg, #FFFFFF 0%, #FFF4E0 100%); }
+.imp-fair__grid { display: grid; grid-template-columns: 1.4fr .6fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+.imp-fair__grid > div { display: grid; gap: 16px; justify-items: start; }
+.imp-fair__list { list-style: none; margin: 4px 0 8px; padding: 0; display: grid; gap: 10px; }
+.imp-fair__list li { position: relative; padding-left: 30px; color: var(--ink); }
+.imp-fair__list li::before { content: ""; position: absolute; left: 0; top: .35em; width: 16px; height: 16px; border-radius: 50%; background: var(--accent); box-shadow: inset 0 0 0 4px #FFD978; }
+.imp-fair__card { background: radial-gradient(120% 90% at 50% 0%, #B3122D 0%, #7A0A1C 100%); color: var(--white); border-radius: 20px; padding: 32px 28px; display: grid; gap: 10px; border-top: 6px solid var(--cn-gold); box-shadow: 0 24px 48px -24px rgba(79,6,19,.7); }
+.imp-fair__card svg { width: 44px; height: 44px; color: var(--cn-gold); }
+.imp-fair__card p { margin: 0; color: #F6D9DE; }
+.imp-fair__card .imp-fair__k { font: 800 1.5rem/1.2 var(--font-display); color: var(--white); }
+@media (max-width: 860px) { .imp-fair__grid { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .imp-fair .btn { width: 100%; } }
