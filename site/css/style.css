@@ -1094,3 +1094,7 @@ main section[id] { scroll-margin-top: 136px; }
 @media (max-width: 1000px) { .theme-cn .imp-hero.srv-hero--banner::before { background: linear-gradient(90deg, rgba(20,8,20,.88) 0%, rgba(20,8,20,.6) 55%, rgba(20,8,20,.15) 100%); } }
 @media (max-width: 760px) { .theme-cn .imp-hero.srv-hero--banner { background: radial-gradient(120% 90% at 50% 0%, #B3122D 0%, #7A0A1C 55%, #4F0613 100%); } }
 .theme-cn .imp-hero .srv-hero__img { object-position: center center; }
+/* Importação: cards do "Como começar" brancos para contrastar com o vermelho */
+.theme-cn .srv-start .srv-steps li { background: var(--white); border: 0; border-top: 5px solid var(--cn-gold); box-shadow: 0 18px 40px -20px rgba(0,0,0,.55); }
+.theme-cn .srv-start .srv-steps p { color: var(--navy); }
+.theme-cn .srv-start .srv-steps .srv-steps__n { background: var(--accent); color: var(--white); }
