@@ -1088,3 +1088,9 @@ main section[id] { scroll-margin-top: 136px; }
   .theme-cn .nav a { border-bottom-color: #9E1A30; }
   .theme-cn .menu-toggle { border-color: #B35A68; }
 }
+/* Importação: banner do Cassiano (torre de Cantão, pavilhão da Canton Fair, contêiner Export Link) */
+.theme-cn .imp-hero.srv-hero--banner { background: #1A0E1E url(../img/importacao-banner.jpg) right center / cover no-repeat; }
+.theme-cn .imp-hero.srv-hero--banner::before { background: linear-gradient(90deg, rgba(20,8,20,.8) 0%, rgba(20,8,20,.55) 42%, rgba(20,8,20,0) 66%); }
+@media (max-width: 1000px) { .theme-cn .imp-hero.srv-hero--banner::before { background: linear-gradient(90deg, rgba(20,8,20,.88) 0%, rgba(20,8,20,.6) 55%, rgba(20,8,20,.15) 100%); } }
+@media (max-width: 760px) { .theme-cn .imp-hero.srv-hero--banner { background: radial-gradient(120% 90% at 50% 0%, #B3122D 0%, #7A0A1C 55%, #4F0613 100%); } }
+.theme-cn .imp-hero .srv-hero__img { object-position: center center; }
